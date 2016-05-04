@@ -31,31 +31,13 @@ class Menu {
     var BBQchicken = String()
     var parmesan = String()
 
-
+    var name = String()
+    var description = String()
     
     
-    init(turkey t:String, Roast roast:String, hammer h:String, trilevel tri:String,reuben r:String,italianbeef i:String,tuna tu:String, twobyfour twofour:String,lien l:String, wrecking w:String, seafoodcrab sfc:String,BBQ B:String, radical rad:String, skyscraper sk:String,megastructure mega:String,BLT BL:String,sawhorse saw:String,ultimatesawhorse usaw:String,classicchicken chick:String,BBQChicken BBQChick:String,parmesan parm:String) {
-            turkey = t
-            Roast = roast
-            hammer = h
-            trilevel = tri
-            reuben = r
-            italainbeef = i
-            tuna = tu
-            twobyfour = twofour
-            lien = l
-            wrecking = w
-            seafoodcrab = sfc
-            BBQ = B
-            radical = rad
-            skyscraper = sk
-            megastructure = mega
-            BLT = BL
-            sawhorse = saw
-            ultimatesawhorse = usaw
-            classicchicken = chick
-            BBQchicken = BBQChick
-            parmesan = parm
+    init(name n:String, description d:String) {
+        name = n
+        description = d
         
         
     }
