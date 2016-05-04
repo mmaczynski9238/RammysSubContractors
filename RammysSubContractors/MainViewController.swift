@@ -16,15 +16,12 @@ class MainViewController: UIViewController, ENSideMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.sideMenuController()?.sideMenu?.delegate = self
         
-        
     }
-
     
-        
-    
-    @IBAction func toggleSideMenu(sender: AnyObject) {
+    @IBAction func toggleMainSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
     
