@@ -31,33 +31,36 @@ class Menu {
     var BBQchicken = String()
     var parmesan = String()
 
-
+    var name = String()
+    var description = String()
     
     
-    init() {
-        turkey = "Turkey & Swiss"
-        Roast = "Roast Beef & Cheese"
-        hammer = "The Hammer & Cheese"
-        trilevel = "The Tri-Level"
-        reuben = "Rammy's Reuben"
-        italainbeef = "Italian Beef with Provolone"
-        tuna = "Tuna & Provolone"
-        twobyfour = "The Two by Four"
-        lien = "The Lien"
-        wrecking = "The Wrecking Ball"
-        seafoodcrab = "Seafood & Crab with Provolone"
-        BBQ = "Rammy's BBQ"
-        radical = "Rammy's Radical Italian Beef"
-        skyscraper = "Skyscraper"
-        megastructure = "Megastructure"
-        BLT = "BLT"
-        sawhorse = "Sawhorse"
-        ultimatesawhorse = "Ultimate Sawhorse"
-        classicchicken = "Classic Chicken"
-        BBQchicken = "BBQ Chicken"
-        parmesan = "Parmesan Chicken"
+    init(name n:String, description d:String) {
+        name = n
+        description = d
         
         
     }
+//    urkey = "Turkey & Swiss"
+//    Roast = "Roast Beef & Cheese"
+//    hammer = "The Hammer & Cheese"
+//    trilevel = "The Tri-Level"
+//    reuben = "Rammy's Reuben"
+//    italainbeef = "Italian Beef with Provolone"
+//    tuna = "Tuna & Provolone"
+//    twobyfour = "The Two by Four"
+//    lien = "The Lien"
+//    wrecking = "The Wrecking Ball"
+//    seafoodcrab = "Seafood & Crab with Provolone"
+//    BBQ = "Rammy's BBQ"
+//    radical = "Rammy's Radical Italian Beef"
+//    skyscraper = "Skyscraper"
+//    megastructure = "Megastructure"
+//    BLT = "BLT"
+//    sawhorse = "Sawhorse"
+//    ultimatesawhorse = "Ultimate Sawhorse"
+//    classicchicken = "Classic Chicken"
+//    BBQchicken = "BBQ Chicken"
+//    parmesan = "Parmesan Chicken"
     
 }

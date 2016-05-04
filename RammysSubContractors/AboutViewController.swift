@@ -1,27 +1,28 @@
 //
-//  MenuViewController.swift
+//  AboutViewController.swift
 //  RammysSubContractors
 //
-//  Created by Michael Maczynski on 5/3/16.
+//  Created by Michael Maczynski on 5/4/16.
 //  Copyright © 2016 JohnHerseyHighSchool. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController, ENSideMenuDelegate {
+class AboutViewController: UIViewController, ENSideMenuDelegate {
     
-    @IBOutlet var menuButtonMenuVC: UIBarButtonItem!
+    @IBOutlet var aboutButtonMainVC: UIBarButtonItem!
     
-    @IBOutlet weak var menuTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.sideMenuController()?.sideMenu?.delegate = self
+        
     }
     
-    @IBAction func toggleMenuSideMenu(sender: AnyObject) {
+    @IBAction func toggleAboutSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
+    
     
     
     // MARK: - ENSideMenu Delegate
