@@ -51,8 +51,8 @@ class CustomTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedBackgroundView
             
             /********* Delete Lines Below To Get Rid of Image**********/
-            var image:UIImage = UIImage(named: "sub")!
-            cell!.imageView!.image = image
+//            var image:UIImage = UIImage(named: "sub")!
+//            cell!.imageView!.image = image
             /*********************************************************/
         }
         
