@@ -8,18 +8,27 @@
 
 import UIKit
 
+
+
 class MainViewController: UIViewController, ENSideMenuDelegate {
     
+    @IBOutlet var menuButtonMainVC: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
+        
+        
     }
+
+    
         
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
+    
+
     
     // MARK: - ENSideMenu Delegate
     func sideMenuWillOpen() {

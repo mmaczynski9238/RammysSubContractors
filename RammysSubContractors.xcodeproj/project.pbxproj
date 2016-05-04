@@ -12,6 +12,7 @@
 		DB7E26331CD953E90058981E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E26321CD953E90058981E /* MenuViewController.swift */; };
 		DBB029A31CD94C6600B8DA12 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB029A21CD94C6600B8DA12 /* CustomTableViewController.swift */; };
 		DBB029A51CD94CF600B8DA12 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */; };
+		DBFF76781CD988E6006ABA66 /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */; };
 		E7BB119E1CD9333C00DF75C6 /* MenuFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */; };
 		F59E817A1CD7E36D0057A02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59E81791CD7E36D0057A02A /* AppDelegate.swift */; };
 		F59E817C1CD7E36D0057A02A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59E817B1CD7E36D0057A02A /* MainViewController.swift */; };
@@ -45,6 +46,7 @@
 		DB7E26321CD953E90058981E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBB029A21CD94C6600B8DA12 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuButton.swift; sourceTree = "<group>"; };
 		E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuFile.swift; sourceTree = "<group>"; };
 		F59E81761CD7E36D0057A02A /* RammysSubContractors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RammysSubContractors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59E81791CD7E36D0057A02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +95,36 @@
 				DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */,
 				DB7E262D1CD951900058981E /* ENSideMenu.swift */,
 				DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */,
+				DBFF767B1CD989D5006ABA66 /* Storyboards */,
 			);
 			name = SideMenuFiles;
+			sourceTree = "<group>";
+		};
+		DBFF76791CD9892B006ABA66 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */,
+				E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		DBFF767A1CD989B8006ABA66 /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				F59E81791CD7E36D0057A02A /* AppDelegate.swift */,
+				F59E81851CD7E36D0057A02A /* Info.plist */,
+			);
+			name = "Other Files";
+			sourceTree = "<group>";
+		};
+		DBFF767B1CD989D5006ABA66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F59E817D1CD7E36D0057A02A /* Main.storyboard */,
+				F59E81821CD7E36D0057A02A /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		F59E816D1CD7E36D0057A02A = {
@@ -120,15 +150,12 @@
 		F59E81781CD7E36D0057A02A /* RammysSubContractors */ = {
 			isa = PBXGroup;
 			children = (
+				DBFF767A1CD989B8006ABA66 /* Other Files */,
+				DBFF76791CD9892B006ABA66 /* Custom Classes */,
 				DB7E26311CD9537E0058981E /* SideMenuFiles */,
-				F59E81791CD7E36D0057A02A /* AppDelegate.swift */,
 				F59E817B1CD7E36D0057A02A /* MainViewController.swift */,
 				DB7E26321CD953E90058981E /* MenuViewController.swift */,
-				F59E817D1CD7E36D0057A02A /* Main.storyboard */,
-				E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */,
 				F59E81801CD7E36D0057A02A /* Assets.xcassets */,
-				F59E81821CD7E36D0057A02A /* LaunchScreen.storyboard */,
-				F59E81851CD7E36D0057A02A /* Info.plist */,
 			);
 			path = RammysSubContractors;
 			sourceTree = "<group>";
@@ -289,6 +316,7 @@
 				E7BB119E1CD9333C00DF75C6 /* MenuFile.swift in Sources */,
 				DBB029A51CD94CF600B8DA12 /* NavigationViewController.swift in Sources */,
 				F59E817A1CD7E36D0057A02A /* AppDelegate.swift in Sources */,
+				DBFF76781CD988E6006ABA66 /* CustomMenuButton.swift in Sources */,
 				DB7E26331CD953E90058981E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
