@@ -12,6 +12,7 @@ class MenuViewController: UIViewController, ENSideMenuDelegate {
     
     @IBOutlet var menuButtonMenuVC: UIBarButtonItem!
     
+    @IBOutlet weak var menuTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
