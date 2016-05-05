@@ -41,12 +41,6 @@ class CustomTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("CELL")
-        var cell1 = tableView.dequeueReusableCellWithIdentifier("CELL1")
-        var cell2 = tableView.dequeueReusableCellWithIdentifier("CELL2")
-        var cell3 = tableView.dequeueReusableCellWithIdentifier("CELL3")
-
-
-
         
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
@@ -57,50 +51,35 @@ class CustomTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedBackgroundView
             
             /********* Delete Lines Below To Get Rid of Image**********/
-//            var image:UIImage = UIImage(named: "sub")!
-//            cell!.imageView!.image = image
-            /*********************************************************/
-        }
-        if (cell1 == nil) {
-            cell1 = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL1")
-            cell1!.backgroundColor = UIColor.clearColor()
-            cell1!.textLabel?.textColor = UIColor.darkGrayColor()
-            let selectedBackgroundView1 = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-            selectedBackgroundView1.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
-            cell1!.selectedBackgroundView = selectedBackgroundView1
-            
-        }
-        if (cell2 == nil) {
-            cell2 = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL2")
-            cell2!.backgroundColor = UIColor.clearColor()
-            cell2!.textLabel?.textColor = UIColor.darkGrayColor()
-            let selectedBackgroundView2 = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-            selectedBackgroundView2.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
-            cell2!.selectedBackgroundView = selectedBackgroundView2
-            
-        }
-        if (cell3 == nil) {
-            cell3 = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL3")
-            cell!.backgroundColor = UIColor.clearColor()
-            cell3!.textLabel?.textColor = UIColor.darkGrayColor()
-            let selectedBackgroundView3 = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-            selectedBackgroundView3.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
-            cell3!.selectedBackgroundView = selectedBackgroundView3
-            
-            /********* Delete Lines Below To Get Rid of Image**********/
             //            var image:UIImage = UIImage(named: "sub")!
             //            cell!.imageView!.image = image
             /*********************************************************/
         }
         
-
-
-
-        cell!.textLabel?.text = "menu"
-        cell1!.textLabel?.text = "history"
-        cell2!.textLabel?.text = "elk grove"
-        cell3!.textLabel?.text = "wheeling"
+        if indexPath.row == 0
+        {
+            cell!.textLabel?.text = "Main"
+            
+        }
+        else if indexPath.row == 1
+        {
+            cell!.textLabel?.text = "Elk Grove Menu"
+            
+        }
+            
+        else if indexPath.row == 2
+        {
+            cell!.textLabel?.text = "Wheeling Menu"
+            
+        }
+        else if indexPath.row == 3
+        {
+            cell!.textLabel?.text = "About"
+            
+        }
         
+        
+        //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         
         return cell!
     }
@@ -127,16 +106,16 @@ class CustomTableViewController: UITableViewController {
         var destViewController : UIViewController
         switch (indexPath.row) {
         case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("menu")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1")
             break
         case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("history")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController2")
             break
         case 2:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("elk grove")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")
             break
         default:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("wheeling")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4")
             break
         }
         sideMenuController()?.setContentViewController(destViewController)
