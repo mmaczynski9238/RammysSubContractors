@@ -29,18 +29,7 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
         toggleSideMenuView()
     }
     
-    @IBAction func segmentedControl(sender: AnyObject) {
-    }
-    switch (sender.selectedSegmentIndex)
-    {
-    case 0:
-    findLocation(elkGroveLocation)
-    case 1:
-    findLocation(wheelingLocation)
-    default:
-    //mapView.mapType = .Standard
-    
-    }
+   
     
     func findLocation(location: String)
     {
@@ -79,6 +68,20 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
     }
+    
+    
+    @IBAction func segmentedControl(sender: UISegmentedControl) {
+        
+        switch (sender.selectedSegmentIndex)
+        {
+        case 0:
+            findLocation(elkGroveLocation)
+        case 1:
+            findLocation(wheelingLocation)
+        default:
+            //mapView.mapType = .Standard
+            
+        }
 }
 
 
