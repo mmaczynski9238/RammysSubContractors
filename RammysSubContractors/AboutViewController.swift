@@ -31,17 +31,16 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
     
     @IBAction func segmentedControl(sender: AnyObject) {
     }
+    switch (sender.selectedSegmentIndex)
+    {
+    case 0:
+    findLocation(elkGroveLocation)
+    case 1:
+    findLocation(wheelingLocation)
+    default:
+    //mapView.mapType = .Standard
     
-//    switch (sender.selectedSegmentIndex)
-//    {
-//    case 0:
-//    findLocation(elkGroveLocation)
-//    case 1:
-//    findLocation(wheelingLocation)
-//    default:
-//    mapView.mapType = .Standard
-//    
-//    }
+    }
     
     func findLocation(location: String)
     {
