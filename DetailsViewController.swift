@@ -12,6 +12,7 @@ import MessageUI
 
 class DetailsViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
+    @IBOutlet weak var callBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +31,8 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
             }
         }
     }
-        @IBAction func sendText(sender: UIButton) {
-            if (MFMessageComposeViewController.canSendText()) {
+    @IBAction func sendText(sender: UIButton) {
+                if (MFMessageComposeViewController.canSendText()) {
                 let controller = MFMessageComposeViewController();
                 controller.body = "";
                 controller.recipients = ["(224)-456-7974"]
