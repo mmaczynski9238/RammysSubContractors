@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="489.5" y="1163.5"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="jQf-Et-wYw">
             <objects>
-                <viewController storyboardIdentifier="ViewController4" id="fV7-UV-vny" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController4" id="fV7-UV-vny" customClass="AboutViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kBJ-t4-Qii"/>
                         <viewControllerLayoutGuide type="bottom" id="snA-8H-RuG"/>
@@ -90,6 +90,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="YFc-Dw-RJQ" id="QIa-cI-ky8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPC-Ah-yNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +181,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-MG-BAl">
+                                <rect key="frame" x="67" y="82" width="242" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Welcome to Rammy’s Sub-Contractors in Wheeling and Elk Grove!
+Rammy’s  specializes in 8-inch oven-baked subs.
+Our menu features cold salads, awesome shakes and desserts.
+Our famous sub catering is also available.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
+                                <rect key="frame" x="69" y="270" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ifE-wO-QiN">
