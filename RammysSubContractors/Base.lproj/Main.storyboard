@@ -80,6 +80,9 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Dw-RJQ">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="603"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22621799495386496" green="0.70216822632720666" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
