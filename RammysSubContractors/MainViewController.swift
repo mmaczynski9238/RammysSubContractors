@@ -13,6 +13,7 @@ import UIKit
 class MainViewController: UIViewController, ENSideMenuDelegate {
     
     @IBOutlet var menuButtonMainVC: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

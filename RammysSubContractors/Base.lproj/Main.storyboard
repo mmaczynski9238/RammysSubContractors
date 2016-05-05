@@ -211,6 +211,7 @@ Our famous sub catering is also available.</string>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="imageView" destination="58m-Ud-bm0" id="Dkf-o5-Q2V"/>
                         <outlet property="menuButtonMainVC" destination="c9T-wU-zsW" id="BYh-fP-DOQ"/>
                     </connections>
                 </viewController>
