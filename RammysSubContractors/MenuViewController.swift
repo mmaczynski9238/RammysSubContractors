@@ -6,8 +6,6 @@
 //  Copyright © 2016 JohnHerseyHighSchool. All rights reserved.
 //
 
-
-
 import UIKit
 
 class MenuViewController: UIViewController, ENSideMenuDelegate {
