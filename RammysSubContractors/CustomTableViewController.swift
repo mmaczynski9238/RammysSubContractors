@@ -12,7 +12,7 @@ class CustomTableViewController: UITableViewController {
     var selectedMenuItem : Int = 0
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
@@ -51,12 +51,35 @@ class CustomTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedBackgroundView
             
             /********* Delete Lines Below To Get Rid of Image**********/
-//            var image:UIImage = UIImage(named: "sub")!
-//            cell!.imageView!.image = image
+            //            var image:UIImage = UIImage(named: "sub")!
+            //            cell!.imageView!.image = image
             /*********************************************************/
         }
         
-        cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
+        if indexPath.row == 0
+        {
+            cell!.textLabel?.text = "Main"
+            
+        }
+        else if indexPath.row == 1
+        {
+            cell!.textLabel?.text = "Elk Grove Menu"
+            
+        }
+            
+        else if indexPath.row == 2
+        {
+            cell!.textLabel?.text = "Wheeling Menu"
+            
+        }
+        else if indexPath.row == 3
+        {
+            cell!.textLabel?.text = "About"
+            
+        }
+        
+        
+        //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         
         return cell!
     }
