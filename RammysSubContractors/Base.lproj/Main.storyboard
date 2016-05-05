@@ -63,29 +63,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-1J-OnL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NzX-QH-FX1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <items>
-                                            <navigationItem title="Title" id="YLr-SV-fUe">
-                                                <barButtonItem key="leftBarButtonItem" style="plain" id="Xc3-PI-0GX">
-                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFM-UR-SoK">
-                                                        <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Dw-RJQ">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="603"/>
-                                    </mapView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.22621799495386496" green="0.70216822632720666" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Dw-RJQ">
+                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NzX-QH-FX1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="YLr-SV-fUe">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Xc3-PI-0GX">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFM-UR-SoK">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o5L-Q6-0dU">
+                                <rect key="frame" x="104" y="69" width="167" height="29"/>
+                                <segments>
+                                    <segment title="Wheeling"/>
+                                    <segment title="Elk Grove"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="fV7-UV-vny" eventType="valueChanged" id="GAo-qG-Ikf"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -182,19 +186,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-MG-BAl">
-                                <rect key="frame" x="67" y="82" width="242" height="162"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
+                                <rect key="frame" x="67" y="297" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-pT-gRW">
+                                <rect key="frame" x="62" y="72" width="251" height="202"/>
                                 <string key="text">Welcome to Rammy’s Sub-Contractors in Wheeling and Elk Grove!
 Rammy’s  specializes in 8-inch oven-baked subs.
 Our menu features cold salads, awesome shakes and desserts.
 Our famous sub catering is also available.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
-                                <rect key="frame" x="69" y="270" width="240" height="128"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -212,6 +216,7 @@ Our famous sub catering is also available.</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="58m-Ud-bm0" id="Dkf-o5-Q2V"/>
+                        <outlet property="labelHP" destination="aYf-pT-gRW" id="D4H-1Q-5JH"/>
                         <outlet property="menuButtonMainVC" destination="c9T-wU-zsW" id="BYh-fP-DOQ"/>
                     </connections>
                 </viewController>
