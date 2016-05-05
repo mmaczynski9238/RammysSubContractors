@@ -25,6 +25,8 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
         toggleSideMenuView()
     }
     
+    @IBAction func segmentedControl(sender: AnyObject) {
+    }
     
     
     // MARK: - ENSideMenu Delegate

@@ -12,6 +12,7 @@ import UIKit
 
 class MainViewController: UIViewController, ENSideMenuDelegate {
     
+    @IBOutlet weak var labelHP: UILabel!
     @IBOutlet var menuButtonMainVC: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -19,6 +20,7 @@ class MainViewController: UIViewController, ENSideMenuDelegate {
         super.viewDidLoad()
         
         self.sideMenuController()?.sideMenu?.delegate = self
+        imageView.image = UIImage(named: "RAMMYS HP")
         
     }
     
