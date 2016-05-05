@@ -157,6 +157,41 @@
             </objects>
             <point key="canvasLocation" x="921.5" y="404.5"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Idy-xc-VVK">
+            <objects>
+                <viewController id="ECH-CW-jEO" customClass="DetailsViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t0p-FZ-qc3"/>
+                        <viewControllerLayoutGuide type="bottom" id="VQZ-zF-sMp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lGG-dh-nmL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-l4-BgP">
+                                <rect key="frame" x="97" y="282" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendText:" destination="ECH-CW-jEO" eventType="touchUpInside" id="tg5-fG-Ha5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOv-Wb-puf">
+                                <rect key="frame" x="145" y="422" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="callBtn" destination="kOv-Wb-puf" id="KfD-Bx-TGw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gml-dg-DXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326.5" y="404.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecj-cS-SAt">
             <objects>
@@ -196,7 +231,7 @@ Rammy’s  specializes in 8-inch oven-baked subs.
 Our menu features cold salads, awesome shakes and desserts.
 Our famous sub catering is also available.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
