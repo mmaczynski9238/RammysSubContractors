@@ -78,6 +78,7 @@ class CustomTableViewController: UITableViewController {
             
         }
         
+        cell?.textLabel?.textColor = UIColor.whiteColor()
         
         //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         
