@@ -1,21 +1,21 @@
 //
-//  MenuViewController.swift
+//  WheelingMenuViewController.swift
 //  RammysSubContractors
 //
-//  Created by Michael Maczynski on 5/3/16.
+//  Created by Michael Maczynski on 5/6/16.
 //  Copyright © 2016 JohnHerseyHighSchool. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
+class WheelingMenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var menuButtonMenuVC: UIBarButtonItem!
+    @IBOutlet var WheelingMenuButtonMenuVC: UIBarButtonItem!
     
-    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var WheelingMenuTableView: UITableView!
     
     var menuArray:[Menu] = [Menu]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
@@ -41,7 +41,7 @@ class MenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDeleg
         menuArray.append(Menu(name: "Classic Chicken", description: "With Provolone Cheese, Bacon & Chipotle Mayo"))
         menuArray.append(Menu(name: "BBQ Chicken", description: "With BBQ Sauce, Bacon & Provolone Cheese"))
         menuArray.append(Menu(name: "Parmesan Chicken", description: "With Marinara Sauce & Provolone Cheeseon Garlic Bread"))
-
+        
         
         
     }
@@ -65,18 +65,18 @@ class MenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDeleg
         
         //var image:UIImage = UIImage(named: "sub")!
         //currentCell.imageView!.image = image
-
+        
         
         return currentCell
         
         
     }
     
-
+    
     
     
     @IBAction func toggleMenuSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
     
-    }
+}

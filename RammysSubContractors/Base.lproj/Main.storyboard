@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="489.5" y="1163.5"/>
         </scene>
-        <!--About View Controller-->
+        <!--Directions View Controller-->
         <scene sceneID="jQf-Et-wYw">
             <objects>
-                <viewController storyboardIdentifier="ViewController4" id="fV7-UV-vny" customClass="AboutViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController4" id="fV7-UV-vny" customClass="DirectionsViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kBJ-t4-Qii"/>
                         <viewControllerLayoutGuide type="bottom" id="snA-8H-RuG"/>
@@ -64,37 +64,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Dw-RJQ">
-                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="245"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NzX-QH-FX1">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agm-qf-p1i">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="YLr-SV-fUe">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Xc3-PI-0GX">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFM-UR-SoK">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o5L-Q6-0dU">
-                                <rect key="frame" x="104" y="69" width="167" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-eL-Tpv">
+                                <rect key="frame" x="198" y="28" width="167" height="29"/>
                                 <segments>
                                     <segment title="Wheeling"/>
                                     <segment title="Elk Grove"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedControl:" destination="fV7-UV-vny" eventType="valueChanged" id="GAo-qG-Ikf"/>
+                                    <action selector="segmentedControl:" destination="fV7-UV-vny" eventType="valueChanged" id="qx6-J2-Xv0"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-sr-oQM" customClass="CustomMenuButton" customModule="RammysSubContractors" customModuleProvider="target">
+                                <rect key="frame" x="21" y="27" width="57" height="30"/>
+                                <connections>
+                                    <action selector="toggleAboutSideMenu:" destination="fV7-UV-vny" eventType="touchUpInside" id="pD3-2W-4d7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="DirectionsMenuMainVC" destination="kEl-sr-oQM" id="hEN-PV-GN2"/>
                         <outlet property="mapView" destination="YFc-Dw-RJQ" id="QIa-cI-ky8"/>
                     </connections>
                 </viewController>
@@ -102,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="928.5" y="1163.5"/>
         </scene>
-        <!--Menu View Controller-->
+        <!-- Elk Grove Menu View Controller-->
         <scene sceneID="N6v-dP-LmT">
             <objects>
-                <viewController storyboardIdentifier="ViewController2" title="Menu View Controller" id="pM8-Wb-m6e" customClass="MenuViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ElkGroveMenu" title=" Elk Grove Menu View Controller" id="pM8-Wb-m6e" customClass="ElkGroveMenuViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="46s-fr-EhC"/>
                         <viewControllerLayoutGuide type="bottom" id="gdB-dZ-am4"/>
@@ -118,12 +114,12 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="BeF-ms-MSq">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="ZxF-mk-iGq">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lj9-Xb-mvt" customClass="CustomMenuButton" customModule="RammysSubContractors" customModuleProvider="target">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="M4E-wc-iuZ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xb1-eM-jaq" customClass="CustomMenuButton" customModule="RammysSubContractors" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="toggleMenuSideMenu:" destination="pM8-Wb-m6e" eventType="touchUpInside" id="vin-kE-rhT"/>
+                                                    <action selector="toggleElkGroveMenuSideMenu:" destination="pM8-Wb-m6e" eventType="touchUpInside" id="qRx-2c-ql1"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -139,18 +135,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="raq-8c-m1A" id="xDL-MI-YeC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30T-h1-ERf">
-                                                    <rect key="frame" x="15" y="19" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="20" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MTZ-Ic-JmK">
-                                                    <rect key="frame" x="15" y="39" width="31" height="14"/>
+                                                    <rect key="frame" x="15" y="39.5" width="30.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -170,18 +166,18 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="menuButtonMenuVC" destination="ZxF-mk-iGq" id="8G1-97-1Bc"/>
-                        <outlet property="menuTableView" destination="TR2-od-rFg" id="h8A-26-bAK"/>
+                        <outlet property="ElkGroveMenuButtonMenuVC" destination="M4E-wc-iuZ" id="7gg-cE-pRh"/>
+                        <outlet property="ElkGroveMenuTableView" destination="TR2-od-rFg" id="ju2-AV-zVo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBs-qY-bEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913.5" y="404.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Wheeling Menu View Controller-->
         <scene sceneID="but-hl-TtZ">
             <objects>
-                <viewController id="rvB-An-EO9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WheelingMenu" title="Wheeling Menu View Controller" id="rvB-An-EO9" customClass="WheelingMenuViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K8g-pS-E78"/>
                         <viewControllerLayoutGuide type="bottom" id="IYj-JR-EaI"/>
@@ -190,26 +186,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-wG-0cZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="XOq-gJ-gQN">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Vck-Oq-2LV">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o8s-Qx-MWo" customClass="CustomMenuButton" customModule="RammysSubContractors" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" "/>
+                                                <connections>
+                                                    <action selector="toggleMenuSideMenu:" destination="rvB-An-EO9" eventType="touchUpInside" id="U9K-eU-Vzg"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08R-1m-V9R">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Xbv-yK-qyI" detailTextLabel="y6i-57-NeG" rowHeight="76" style="IBUITableViewCellStyleSubtitle" id="Lht-GO-IZ3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wheelingCell" textLabel="Xbv-yK-qyI" detailTextLabel="y6i-57-NeG" rowHeight="76" style="IBUITableViewCellStyleSubtitle" id="Lht-GO-IZ3">
                                         <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lht-GO-IZ3" id="OwE-oH-ttN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xbv-yK-qyI">
-                                                    <rect key="frame" x="15" y="21" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="22" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y6i-57-NeG">
-                                                    <rect key="frame" x="15" y="41" width="41" height="14"/>
+                                                    <rect key="frame" x="15" y="41.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -219,17 +232,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MIu-Mx-rdx" id="YFv-JV-pgJ"/>
+                                    <outlet property="delegate" destination="rvB-An-EO9" id="peU-MF-MY0"/>
+                                </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-wG-0cZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="XOq-gJ-gQN"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="WheelingMenuButtonMenuVC" destination="Vck-Oq-2LV" id="UCZ-gF-7K7"/>
+                        <outlet property="WheelingMenuTableView" destination="08R-1m-V9R" id="lgY-UT-64h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4l-o4-2cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,7 +308,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController1" id="BYZ-38-t0r" customClass="MainViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" id="BYZ-38-t0r" customClass="MainViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -312,9 +327,6 @@ Our famous sub catering is also available.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
-                                <rect key="frame" x="0.0" y="282" width="376" height="200"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-58-mtN">
                                 <rect key="frame" x="3" y="506" width="184" height="127"/>
                                 <string key="text">Elk Grove
@@ -338,6 +350,9 @@ Phone: 847-215-7330
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
+                                <rect key="frame" x="0.0" y="282" width="376" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -347,7 +362,7 @@ Phone: 847-215-7330
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="toggleMainSideMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hxe-to-xZG"/>
+                                    <action selector="toggleMainSideMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bT-Kx-Nep"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -356,7 +371,7 @@ Phone: 847-215-7330
                     <connections>
                         <outlet property="imageView" destination="58m-Ud-bm0" id="Dkf-o5-Q2V"/>
                         <outlet property="labelHP" destination="aYf-pT-gRW" id="D4H-1Q-5JH"/>
-                        <outlet property="menuButtonMainVC" destination="c9T-wU-zsW" id="BYh-fP-DOQ"/>
+                        <outlet property="menuButtonMainVC" destination="c9T-wU-zsW" id="ti6-Q5-E3D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  DirectionsViewController.swift
 //  RammysSubContractors
 //
 //  Created by Michael Maczynski on 5/4/16.
@@ -10,12 +10,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class AboutViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate {
+class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate {
     
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
     
-    @IBOutlet var aboutButtonMainVC: UIBarButtonItem!
+    @IBOutlet var DirectionsMenuMainVC: CustomMenuButton!
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {

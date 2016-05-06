@@ -35,7 +35,7 @@ class CustomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return 5
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -74,6 +74,11 @@ class CustomTableViewController: UITableViewController {
         }
         else if indexPath.row == 3
         {
+            cell!.textLabel?.text = "Directions"
+            
+        }
+        else if indexPath.row == 4
+        {
             cell!.textLabel?.text = "About"
             
         }
@@ -107,13 +112,13 @@ class CustomTableViewController: UITableViewController {
         var destViewController : UIViewController
         switch (indexPath.row) {
         case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainMenu")
             break
         case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController2")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveMenu")
             break
         case 2:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("WheelingMenu")
             break
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4")
