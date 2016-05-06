@@ -93,7 +93,7 @@ class CustomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        print("did select row: \(indexPath.row)")
+        //print("did select row: \(indexPath.row)")
         
         if (indexPath.row == selectedMenuItem) {
             return

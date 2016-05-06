@@ -22,22 +22,6 @@ class NavigationController: ENSideMenuNavigationController, ENSideMenuDelegate {
         view.bringSubviewToFront(navigationBar)
     }
     
-    // MARK: - ENSideMenu Delegate
-    func sideMenuWillOpen() {
-        print("sideMenuWillOpen")
-    }
-    
-    func sideMenuWillClose() {
-        print("sideMenuWillClose")
-    }
-    
-    func sideMenuDidClose() {
-        print("sideMenuDidClose")
-    }
-    
-    func sideMenuDidOpen() {
-        print("sideMenuDidOpen")
-    }
-    
+        
 }
 
