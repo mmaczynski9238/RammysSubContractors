@@ -99,7 +99,6 @@
 				DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */,
 				DB7E262D1CD951900058981E /* ENSideMenu.swift */,
 				DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */,
-				DBFF767B1CD989D5006ABA66 /* Storyboards */,
 			);
 			name = SideMenuFiles;
 			sourceTree = "<group>";
@@ -107,6 +106,7 @@
 		DBFF76791CD9892B006ABA66 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */,
 				DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */,
 			);
 			name = "Custom Classes";
@@ -124,6 +124,7 @@
 		DBFF767B1CD989D5006ABA66 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				F59E817D1CD7E36D0057A02A /* Main.storyboard */,
 				F59E81821CD7E36D0057A02A /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -159,7 +160,9 @@
 				DBFF767A1CD989B8006ABA66 /* Other Files */,
 				DBFF76791CD9892B006ABA66 /* Custom Classes */,
 				DB7E26311CD9537E0058981E /* SideMenuFiles */,
+				DBFF767B1CD989D5006ABA66 /* Storyboards */,
 				F59E817B1CD7E36D0057A02A /* MainViewController.swift */,
+				DB7E26321CD953E90058981E /* MenuViewController.swift */,
 				F51FEEDA1CDA824A00037502 /* AboutViewController.swift */,
 				F59E81801CD7E36D0057A02A /* Assets.xcassets */,
 			);

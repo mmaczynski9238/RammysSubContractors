@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, ENSideMenuDelegate {
+class MenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var menuButtonMenuVC: UIBarButtonItem!
     
@@ -19,6 +19,7 @@ class MenuViewController: UIViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
+        
         menuArray.append(Menu(name: "Turkey & Swiss", description: "Sliced Turkey Breast with Cheese"))
         menuArray.append(Menu(name: "Roast Beef & Cheese", description: "Roast Beef, Cheddar Cheese, Bacon & Mild Horseradish sauce"))
         menuArray.append(Menu(name: "The Hammer & Cheese", description: "Ham with Swiss or Cheddar"))
@@ -44,6 +45,35 @@ class MenuViewController: UIViewController, ENSideMenuDelegate {
         
         
     }
+    
+    
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return menuArray.count
+    }
+    
+    /************************************/
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let currentMenuItem = menuArray[indexPath.row]
+        let currentCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        currentCell.textLabel!.text = currentMenuItem.name
+        currentCell.detailTextLabel?.text = currentMenuItem.description
+        
+//        var image:UIImage = UIImage(named: "sub")!
+//        currentCell.imageView!.image = image
+
+        
+        return currentCell
+        
+        
+    }
+    
+
+    
     
     @IBAction func toggleMenuSideMenu(sender: AnyObject) {
         toggleSideMenuView()
