@@ -31,6 +31,8 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
             }
         }
     }
+    @IBAction func phoneCall(sender: UIButton) {
+    }
     @IBAction func sendText(sender: UIButton) {
                 if (MFMessageComposeViewController.canSendText()) {
                 let controller = MFMessageComposeViewController();
