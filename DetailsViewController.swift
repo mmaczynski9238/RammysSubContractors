@@ -32,18 +32,19 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
         }
     }
     @IBAction func phoneCall(sender: UIButton) {
+        callNumber("(847)-215-7330")
     }
     @IBAction func sendText(sender: UIButton) {
                 if (MFMessageComposeViewController.canSendText()) {
                 let controller = MFMessageComposeViewController();
                 controller.body = "";
-                controller.recipients = ["(224)-456-7974"]
+                controller.recipients = ["(847)-215-7330"]
                 controller.messageComposeDelegate = self;
                 self.presentViewController(controller, animated: true, completion: nil);
             }
         }
         
-        func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result:MessageComposeResult) {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
