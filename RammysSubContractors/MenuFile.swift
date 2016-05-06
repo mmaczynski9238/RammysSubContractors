@@ -9,27 +9,6 @@
 import Foundation
 
 class Menu {
-    var turkey = String()
-    var Roast = String()
-    var hammer = String()
-    var trilevel = String()
-    var reuben = String()
-    var italainbeef = String()
-    var tuna = String()
-    var twobyfour = String()
-    var lien = String()
-    var wrecking = String()
-    var seafoodcrab = String()
-    var BBQ = String()
-    var radical = String()
-    var skyscraper = String()
-    var megastructure = String()
-    var BLT = String()
-    var sawhorse = String()
-    var ultimatesawhorse = String()
-    var classicchicken = String()
-    var BBQchicken = String()
-    var parmesan = String()
 
     var name = String()
     var description = String()
