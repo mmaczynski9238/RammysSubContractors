@@ -60,7 +60,7 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
     
     func displayMap(placemark: CLPlacemark) {
         let center = placemark.location!.coordinate
-        let span = MKCoordinateSpanMake(1.0, 1.0)
+        let span = MKCoordinateSpanMake(0.3, 0.3)
         let region = MKCoordinateRegionMake(center, span)
         let pin = MKPointAnnotation()
         pin.coordinate = center
@@ -79,12 +79,12 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
         case 1:
             findLocation(wheelingLocation)
         default:
-            //mapView.mapType = .Standard
+            findLocation(wheelingLocation)
             
         }
+    }
+
 }
-
-
 
 
 
