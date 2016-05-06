@@ -63,8 +63,8 @@ class MenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDeleg
         currentCell.textLabel!.text = currentMenuItem.name
         currentCell.detailTextLabel?.text = currentMenuItem.description
         
-//        var image:UIImage = UIImage(named: "sub")!
-//        currentCell.imageView!.image = image
+        //var image:UIImage = UIImage(named: "sub")!
+        //currentCell.imageView!.image = image
 
         
         return currentCell

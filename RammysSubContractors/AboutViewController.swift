@@ -75,9 +75,9 @@ class AboutViewController: UIViewController, ENSideMenuDelegate {
         switch (sender.selectedSegmentIndex)
         {
         case 0:
-            findLocation(elkGroveLocation)
-        case 1:
             findLocation(wheelingLocation)
+        case 1:
+            findLocation(elkGroveLocation)
         default:
             findLocation(wheelingLocation)
             
