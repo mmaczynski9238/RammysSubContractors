@@ -78,6 +78,7 @@ class CustomTableViewController: UITableViewController {
             
         }
         
+        cell?.textLabel?.textColor = UIColor.whiteColor()
         
         //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         
@@ -93,7 +94,7 @@ class CustomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        print("did select row: \(indexPath.row)")
+        //print("did select row: \(indexPath.row)")
         
         if (indexPath.row == selectedMenuItem) {
             return

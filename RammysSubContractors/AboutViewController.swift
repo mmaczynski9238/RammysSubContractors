@@ -8,28 +8,47 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class AboutViewController: UIViewController, ENSideMenuDelegate {
-    
+class AboutViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate {
     
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
     
     @IBOutlet var aboutButtonMainVC: UIBarButtonItem!
-    
+    let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.sideMenuController()?.sideMenu?.delegate = self
+        findLocation(wheelingLocation)
         
+        self.sideMenuController()?.sideMenu?.delegate = self
+
     }
-    
     @IBAction func toggleAboutSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
+    /*********************/
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let location = locations.last
+        
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        
+        self.mapView.setRegion(region, animated: true)
+        
+        self.locationManager.stopUpdatingLocation()
+    }
     
-   
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Error: " + error.localizedDescription)
+    }
+
+    /*********************/
+
     
     func findLocation(location: String)
     {
