@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB7E262E1CD951900058981E /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262D1CD951900058981E /* ENSideMenu.swift */; };
 		DB7E26301CD952220058981E /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */; };
-		DB7E26331CD953E90058981E /* ElkGroveMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E26321CD953E90058981E /* ElkGroveMenuViewController.swift */; };
-		DB86DA911CDD491900227413 /* WheelingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86DA901CDD491900227413 /* WheelingMenuViewController.swift */; };
+		DB7E26331CD953E90058981E /* ElkGroveSubsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */; };
+		DB86DA911CDD491900227413 /* WheelingSubsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB86DA901CDD491900227413 /* WheelingSubsVC.swift */; };
 		DBB029A31CD94C6600B8DA12 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB029A21CD94C6600B8DA12 /* CustomTableViewController.swift */; };
 		DBB029A51CD94CF600B8DA12 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */; };
 		DBFF76781CD988E6006ABA66 /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */; };
@@ -46,8 +46,8 @@
 /* Begin PBXFileReference section */
 		DB7E262D1CD951900058981E /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
-		DB7E26321CD953E90058981E /* ElkGroveMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElkGroveMenuViewController.swift; sourceTree = "<group>"; };
-		DB86DA901CDD491900227413 /* WheelingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelingMenuViewController.swift; sourceTree = "<group>"; };
+		DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElkGroveSubsVC.swift; sourceTree = "<group>"; };
+		DB86DA901CDD491900227413 /* WheelingSubsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelingSubsVC.swift; sourceTree = "<group>"; };
 		DBB029A21CD94C6600B8DA12 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		DBB029A41CD94CF600B8DA12 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		DBFF76771CD988E6006ABA66 /* CustomMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuButton.swift; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				DB7E26311CD9537E0058981E /* SideMenuFiles */,
 				DBFF767B1CD989D5006ABA66 /* Storyboards */,
 				F59E817B1CD7E36D0057A02A /* MainViewController.swift */,
-				DB7E26321CD953E90058981E /* ElkGroveMenuViewController.swift */,
-				DB86DA901CDD491900227413 /* WheelingMenuViewController.swift */,
+				DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */,
+				DB86DA901CDD491900227413 /* WheelingSubsVC.swift */,
 				F51FEEDA1CDA824A00037502 /* DirectionsViewController.swift */,
 				E70C9AC01CDBD9280000F313 /* DetailsViewController.swift */,
 				F59E81801CD7E36D0057A02A /* Assets.xcassets */,
@@ -326,10 +326,10 @@
 				E7BB119E1CD9333C00DF75C6 /* MenuFile.swift in Sources */,
 				DBB029A51CD94CF600B8DA12 /* NavigationViewController.swift in Sources */,
 				F59E817A1CD7E36D0057A02A /* AppDelegate.swift in Sources */,
-				DB86DA911CDD491900227413 /* WheelingMenuViewController.swift in Sources */,
+				DB86DA911CDD491900227413 /* WheelingSubsVC.swift in Sources */,
 				DBFF76781CD988E6006ABA66 /* CustomMenuButton.swift in Sources */,
 				F51FEEDB1CDA824A00037502 /* DirectionsViewController.swift in Sources */,
-				DB7E26331CD953E90058981E /* ElkGroveMenuViewController.swift in Sources */,
+				DB7E26331CD953E90058981E /* ElkGroveSubsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

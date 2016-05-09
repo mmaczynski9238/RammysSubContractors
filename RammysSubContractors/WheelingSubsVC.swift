@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WheelingMenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
+class WheelingSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var WheelingMenuButtonMenuVC: UIBarButtonItem!
     

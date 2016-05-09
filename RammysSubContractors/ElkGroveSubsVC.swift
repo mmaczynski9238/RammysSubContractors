@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElkGroveMenuViewController: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
+class ElkGroveSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var ElkGroveMenuButtonMenuVC: UIBarButtonItem!
     
