@@ -115,10 +115,10 @@ class CustomTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainMenu")
             break
         case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveMenu")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveMenuPickerVC")
             break
         case 2:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("WheelingMenu")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("WheelingMenuPickerVC")
             break
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4")
