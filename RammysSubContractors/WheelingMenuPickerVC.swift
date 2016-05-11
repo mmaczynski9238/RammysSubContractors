@@ -16,11 +16,14 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
     var WheelingMenuArray:[Menu] = [Menu]()
     var selectedMenuItem : Int = 0
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
         
+        view.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+
+
         WheelingMenuArray.append(Menu(name: "Subs", description: ""))
         WheelingMenuArray.append(Menu(name: "Drinks", description: ""))
         WheelingMenuArray.append(Menu(name: "Salads", description: ""))
@@ -46,6 +49,11 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         let currentWMenuCell = tableView.dequeueReusableCellWithIdentifier("myWMenuCell", forIndexPath: indexPath)
         currentWMenuCell.textLabel!.text = currentWMenuItem.name
         currentWMenuCell.detailTextLabel?.text = currentWMenuItem.description
+        currentWMenuCell.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+        currentWMenuCell.textLabel!.textColor = UIColor.whiteColor()
+        currentWMenuCell.detailTextLabel!.textColor = UIColor.whiteColor()
+        WheelingMenuPickerTableView.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+        
         
         //var image:UIImage = UIImage(named: "sub")!
         //currentCell.imageView!.image = image
