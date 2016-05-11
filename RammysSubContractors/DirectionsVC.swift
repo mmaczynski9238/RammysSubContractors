@@ -15,7 +15,6 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
     
-    @IBOutlet var DirectionsMenuMainVC: CustomMenuButton!
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
