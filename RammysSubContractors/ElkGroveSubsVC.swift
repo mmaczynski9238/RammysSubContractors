@@ -10,7 +10,6 @@ import UIKit
 
 class ElkGroveSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var ElkGroveMenuButtonMenuVC: UIBarButtonItem!
     
     @IBOutlet weak var ElkGroveMenuTableView: UITableView!
     
@@ -76,6 +75,9 @@ class ElkGroveSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate,
         
     }
     
+    @IBAction func EGBackButton(sender: AnyObject) {
+        
+    }
     
     @IBAction func toggleElkGroveMenuSideMenu(sender: AnyObject) {
         toggleSideMenuView()
