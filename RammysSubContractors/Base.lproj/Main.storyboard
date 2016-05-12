@@ -66,6 +66,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Dw-RJQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axe-Kf-tHB">
+                                <rect key="frame" x="313" y="613" width="42" height="41"/>
+                                <state key="normal" title="Get Location" image="location"/>
+                                <connections>
+                                    <action selector="getLocation:" destination="fV7-UV-vny" eventType="touchUpInside" id="M2y-sF-fjm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -558,6 +565,9 @@ Phone: 847-215-7330
             <point key="canvasLocation" x="-407.5" y="1454.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aUN-62-gx2"/>
         <segue reference="7L4-HT-zsy"/>
