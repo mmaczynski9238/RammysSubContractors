@@ -59,9 +59,16 @@ class WheelingSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate,
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let currentMenuItem = WheelingMenuArray[indexPath.row]
-        let currentCell = tableView.dequeueReusableCellWithIdentifier("myWCell", forIndexPath: indexPath)
+        let currentCell = tableView.dequeueReusableCellWithIdentifier("myWCell")!
         currentCell.textLabel!.text = currentMenuItem.name
         currentCell.detailTextLabel?.text = currentMenuItem.description
+        currentCell.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+        currentCell.textLabel!.textColor = UIColor.whiteColor()
+        currentCell.detailTextLabel!.textColor = UIColor.whiteColor()
+        
+        //it is 2:49
+        
+
         
         //var image:UIImage = UIImage(named: "sub")!
         //currentCell.imageView!.image = image
