@@ -84,6 +84,15 @@ class ElkGroveMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
     }
 
     
+    @IBAction func Subs(sender: UIButton) {
+        
+    }
+    @IBAction func Sides(sender: UIButton) {
+    }
+    @IBAction func Drinks(sender: UIButton) {
+    }
+    
+    
     @IBAction func toggleElkGroveMenuSideMenu(sender: AnyObject) {
         toggleSideMenuView()
     }
