@@ -20,6 +20,15 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        
+        self.mapView.showsUserLocation = true
+        
+        
+        
         findLocation(wheelingLocation)
         
         self.sideMenuController()?.sideMenu?.delegate = self
@@ -29,6 +38,11 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         toggleSideMenuView()
     }
     /*********************/
+    @IBAction func getLocation(sender: UIButton) {
+    self.locationManager.startUpdatingLocation()
+
+    }
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let location = locations.last
