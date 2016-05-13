@@ -122,12 +122,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q46-9q-W95">
+                                <rect key="frame" x="20" y="72" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Subs"/>
+                                    <segment title="Sides"/>
+                                    <segment title="Drinks"/>
+                                </segments>
+                                <connections>
+                                    <action selector="EGsegmentedAction:" destination="MbJ-fd-b3Y" eventType="valueChanged" id="qzm-7y-eNg"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RZH-fO-g28">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEGMenuCell" textLabel="cBa-Ke-2Ml" detailTextLabel="hpj-gy-5bc" style="IBUITableViewCellStyleSubtitle" id="1bR-Zj-Eeb">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1bR-Zj-Eeb" id="ZgJ-vX-k8S">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -156,45 +167,6 @@
                                     <outlet property="delegate" destination="MbJ-fd-b3Y" id="IOy-Cq-Clx"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G45-z0-2Pl">
-                                <rect key="frame" x="0.0" y="82" width="91" height="37"/>
-                                <state key="normal" title="BUttom" image="Button Blank Red-1"/>
-                                <connections>
-                                    <action selector="Subs:" destination="MbJ-fd-b3Y" eventType="touchUpInside" id="1w8-gN-MIP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c7-gP-mp8">
-                                <rect key="frame" x="88" y="82" width="95" height="37"/>
-                                <state key="normal" title="Button" image="Button Blank Red-1"/>
-                                <connections>
-                                    <action selector="Sides:" destination="MbJ-fd-b3Y" eventType="touchUpInside" id="6q1-gP-XV2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-m8-cuh">
-                                <rect key="frame" x="178" y="82" width="92" height="37"/>
-                                <state key="normal" title="Button" image="Button Blank Red-1"/>
-                                <connections>
-                                    <action selector="Drinks:" destination="MbJ-fd-b3Y" eventType="touchUpInside" id="Hkt-QQ-m4h"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUBS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koO-ut-LXo">
-                                <rect key="frame" x="13" y="84" width="64" height="33"/>
-                                <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SIDES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-3T-Hkb">
-                                <rect key="frame" x="102" y="84" width="62" height="32"/>
-                                <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DRINKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-wz-OhM">
-                                <rect key="frame" x="178" y="83" width="91" height="33"/>
-                                <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -213,6 +185,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ElkGroveMenuPickerTableView" destination="RZH-fO-g28" id="9xL-zZ-p5Y"/>
+                        <outlet property="ElkGroveSegment" destination="Q46-9q-W95" id="fXc-13-byE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQB-CW-Deu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,12 +270,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vl1-55-26Q">
+                                <rect key="frame" x="20" y="91" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Subs"/>
+                                    <segment title="Sides"/>
+                                    <segment title="Drinks"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedAction:" destination="0AB-Ks-4nK" eventType="valueChanged" id="dEE-pj-hL1"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="57N-fk-zZk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myWMenuCell" textLabel="GmC-wO-egE" detailTextLabel="Iqx-c9-YGb" style="IBUITableViewCellStyleSubtitle" id="tVI-If-PR0">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tVI-If-PR0" id="L60-WA-6kN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -348,6 +332,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="WheelingMenuPickerTableView" destination="57N-fk-zZk" id="hUh-ef-isk"/>
+                        <outlet property="segmentedController" destination="Vl1-55-26Q" id="k0Q-mj-ziW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0O-MT-UzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -486,16 +471,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-pT-gRW">
-                                <rect key="frame" x="62" y="72" width="251" height="202"/>
-                                <string key="text">Welcome to Rammy’s Sub-Contractors in Wheeling and Elk Grove!
-Rammy’s  specializes in 8-inch oven-baked subs.
-Our menu features cold salads, awesome shakes and desserts.
-Our famous sub catering is also available.</string>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-58-mtN">
                                 <rect key="frame" x="3" y="506" width="184" height="127"/>
                                 <string key="text">Elk Grove
@@ -522,6 +497,22 @@ Phone: 847-215-7330
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
                                 <rect key="frame" x="0.0" y="282" width="376" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of1-D4-yJI">
+                                <rect key="frame" x="3" y="98" width="372" height="89"/>
+                                <string key="text">Welcome to Rammy’s Subcontractors
+</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-pT-gRW">
+                                <rect key="frame" x="-3" y="149" width="380" height="150"/>
+                                <string key="text">Rammy’s  specializes in Homeade Subs.
+Our famous subs is now available for catering.</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.18431372549019609" green="0.23137254901960785" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -606,11 +597,10 @@ Phone: 847-215-7330
         </scene>
     </scenes>
     <resources>
-        <image name="Button Blank Red-1" width="128" height="128"/>
         <image name="location" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aUN-62-gx2"/>
-        <segue reference="MJE-X9-KFF"/>
+        <segue reference="CLR-RU-sQd"/>
+        <segue reference="7L4-HT-zsy"/>
     </inferredMetricsTieBreakers>
 </document>

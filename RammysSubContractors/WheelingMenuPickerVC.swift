@@ -10,6 +10,7 @@ import UIKit
 
 class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var segmentedController: UISegmentedControl!
     
     @IBOutlet var WheelingMenuPickerTableView: UITableView!
     
