@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB251D4D1CE570BF00F9E2E6 /* DirectionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */; };
 		DB7E262E1CD951900058981E /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262D1CD951900058981E /* ENSideMenu.swift */; };
 		DB7E26301CD952220058981E /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */; };
 		DB7E26331CD953E90058981E /* ElkGroveSubsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsTableView.swift; sourceTree = "<group>"; };
 		DB7E262D1CD951900058981E /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElkGroveSubsVC.swift; sourceTree = "<group>"; };
@@ -167,9 +169,10 @@
 				DB7E26321CD953E90058981E /* ElkGroveSubsVC.swift */,
 				DB86DA941CE16C4300227413 /* WheelingMenuPickerVC.swift */,
 				DB86DA901CDD491900227413 /* WheelingSubsVC.swift */,
-				F51FEEDA1CDA824A00037502 /* DirectionsVC.swift */,
 				E7BB119D1CD9333C00DF75C6 /* MenuFile.swift */,
 				E70C9AC01CDBD9280000F313 /* DetailsViewController.swift */,
+				F51FEEDA1CDA824A00037502 /* DirectionsVC.swift */,
+				DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */,
 				F59E81801CD7E36D0057A02A /* Assets.xcassets */,
 			);
 			path = RammysSubContractors;
@@ -335,6 +338,7 @@
 				DBB029A51CD94CF600B8DA12 /* NavigationViewController.swift in Sources */,
 				F59E817A1CD7E36D0057A02A /* AppDelegate.swift in Sources */,
 				DB86DA911CDD491900227413 /* WheelingSubsVC.swift in Sources */,
+				DB251D4D1CE570BF00F9E2E6 /* DirectionsTableView.swift in Sources */,
 				DBFF76781CD988E6006ABA66 /* CustomMenuButton.swift in Sources */,
 				F51FEEDB1CDA824A00037502 /* DirectionsVC.swift in Sources */,
 				DB7E26331CD953E90058981E /* ElkGroveSubsVC.swift in Sources */,
