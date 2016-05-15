@@ -27,67 +27,44 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         
         self.mapView.showsUserLocation = true
         
-        
-        
         findLocation(wheelingLocation)
         
         self.sideMenuController()?.sideMenu?.delegate = self
 
     }
     @IBAction func toggleAboutSideMenu(sender: AnyObject) {
-        toggleSideMenuView()
-    }
+        toggleSideMenuView()}
     /*********************/
     @IBAction func getLocation(sender: UIButton) {
     self.locationManager.startUpdatingLocation()
-
     }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-    {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let location = locations.last
         
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        
         self.mapView.setRegion(region, animated: true)
-        
         self.locationManager.stopUpdatingLocation()
     }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
-    {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
         print("Error: " + error.localizedDescription)
     }
 
     /*********************/
-
-    
     func findLocation(location: String)
     {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(location) { (placemarks, error) -> Void in
-            if error != nil
-            {
+            if error != nil {
                 print(error)
             }
-            else
-            {
-                for placemark in placemarks!
-                {
-                            self.displayMap(placemark)
+            else {
+                for placemark in placemarks! {
+                    self.displayMap(placemark)
                 }
-                
-                /****************************************/
-                //ipad only
-//                alert.popoverPresentationController!.sourceView = self.view
-//                alert.popoverPresentationController!.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0,                        self.view.bounds.size.height / 2.0, 1.0, 1.0)
-                
-                
             }
         }
     }
-    
     /****************************************/
     
     func displayMap(placemark: CLPlacemark) {
@@ -101,9 +78,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         mapView.setRegion(region, animated: true)
     }
     
-    
     @IBAction func segmentedControl(sender: UISegmentedControl) {
-        
         switch (sender.selectedSegmentIndex)
         {
         case 0:
@@ -112,34 +87,9 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             findLocation(elkGroveLocation)
         default:
             findLocation(wheelingLocation)
-            
         }
     }
-
+    
+    
+    
 }
-
-
-
-
-//
-//    // MARK: - ENSideMenu Delegate
-//    func sideMenuWillOpen() {
-//        print("sideMenuWillOpen")
-//    }
-//
-//    func sideMenuWillClose() {
-//        print("sideMenuWillClose")
-//    }
-//
-//    func sideMenuShouldOpenSideMenu() -> Bool {
-//        print("sideMenuShouldOpenSideMenu")
-//        return true
-//    }
-//
-//    func sideMenuDidClose() {
-//        print("sideMenuDidClose")
-//    }
-//
-//    func sideMenuDidOpen() {
-//        print("sideMenuDidOpen")
-//    }

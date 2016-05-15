@@ -31,7 +31,6 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         initSubs()
         initDrinks()
         initSides()
-        
         createSegmentView()
        
 
@@ -44,8 +43,8 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
     func createSegmentView()
     {
         let segmentFrame = CGRect(x: 20.0, y: 70.0, width: 335, height: 50.0)
-        self.segmentView = SMSegmentView(frame: segmentFrame, separatorColour: UIColor(white: 0.95, alpha: 0.3), separatorWidth: 0.5, segmentProperties: [keySegmentTitleFont: UIFont.systemFontOfSize(12.0), keySegmentOnSelectionColour: UIColor(red: 0, green: 97.0/255.0, blue: 191.0/255.0, alpha: 1.0), keySegmentOffSelectionColour: UIColor.whiteColor(), keyContentVerticalMargin: Float(10.0)])
-        
+        self.segmentView = SMSegmentView(frame: segmentFrame, separatorColour: UIColor(white: 0.95, alpha: 0.3), separatorWidth: 0.5, segmentProperties: [keySegmentTitleFont: UIFont.systemFontOfSize(12.0), keySegmentOnSelectionColour: UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0/*red: 0, green: 97.0/255.0, blue: 191.0/255.0*/, alpha: 1.0), keySegmentOffSelectionColour: UIColor.whiteColor(), keyContentVerticalMargin: Float(10.0)])
+        segmentView.segmentOnSelectionTextColour = UIColor.darkGrayColor()
         self.segmentView.delegate = self
         self.segmentView.backgroundColor = UIColor.clearColor()
         self.segmentView.layer.cornerRadius = 5.0
@@ -79,11 +78,20 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         }
     }
     
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Roboto", size: 38)!
+        header.textLabel?.textColor = UIColor.lightGrayColor()
+    }
+
+    
+    
     /************************************/
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let currentEGMenuCell = tableView.dequeueReusableCellWithIdentifier("myEGMenuCell", forIndexPath: indexPath)
-        
+
         if currentIndex == 0 {//currentIndex == 0{
             let currentEGMenuItem = ElkGroveSubsMenuArray[indexPath.row]
             currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
