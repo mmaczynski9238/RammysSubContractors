@@ -138,7 +138,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEGMenuCell" textLabel="cBa-Ke-2Ml" detailTextLabel="hpj-gy-5bc" style="IBUITableViewCellStyleSubtitle" id="1bR-Zj-Eeb">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1bR-Zj-Eeb" id="ZgJ-vX-k8S">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -238,6 +238,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ECH-CW-jEO" kind="presentation" id="wng-FV-T4S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -255,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBs-qY-bEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235.5" y="-99.5"/>
+            <point key="canvasLocation" x="3134.5" y="-105.5"/>
         </scene>
         <!--WheelingMenuPickerVC-->
         <scene sceneID="6oz-TU-6Or">
@@ -270,7 +273,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="57N-fk-zZk">
-                                <rect key="frame" x="0.0" y="60" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myWMenuCell" textLabel="GmC-wO-egE" detailTextLabel="Iqx-c9-YGb" style="IBUITableViewCellStyleSubtitle" id="tVI-If-PR0">
@@ -312,7 +315,7 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="toggleWheelingMenuSideMenu:" destination="0AB-Ks-4nK" eventType="touchUpInside" id="XCh-LB-vUi"/>
+                                    <action selector="toggleWheelingSideMenu:" destination="0AB-Ks-4nK" eventType="touchUpInside" id="Peq-sY-0LK"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -394,7 +397,7 @@
         <!--Details View Controller-->
         <scene sceneID="Idy-xc-VVK">
             <objects>
-                <viewController id="ECH-CW-jEO" customClass="DetailsViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Details View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ECH-CW-jEO" customClass="DetailsViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t0p-FZ-qc3"/>
                         <viewControllerLayoutGuide type="bottom" id="VQZ-zF-sMp"/>
@@ -404,15 +407,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-l4-BgP">
-                                <rect key="frame" x="97" y="282" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="105" y="282" width="30" height="30"/>
+                                <state key="normal" title="Text"/>
                                 <connections>
                                     <action selector="sendText:" destination="ECH-CW-jEO" eventType="touchUpInside" id="tg5-fG-Ha5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOv-Wb-puf">
-                                <rect key="frame" x="232" y="282" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="240" y="282" width="30" height="30"/>
+                                <state key="normal" title="Call"/>
                                 <connections>
                                     <action selector="phoneCall:" destination="ECH-CW-jEO" eventType="touchUpInside" id="bdQ-Hu-knH"/>
                                 </connections>
@@ -427,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gml-dg-DXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247.5" y="1603.5"/>
+            <point key="canvasLocation" x="2107.5" y="-105.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecj-cS-SAt">
@@ -584,7 +587,7 @@ Our famous subs is now available for catering.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MJE-X9-KFF"/>
+        <segue reference="7L4-HT-zsy"/>
         <segue reference="CLR-RU-sQd"/>
     </inferredMetricsTieBreakers>
 </document>

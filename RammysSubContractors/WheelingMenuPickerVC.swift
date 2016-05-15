@@ -38,7 +38,7 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
             createSegmentView()
             
             
-            ElkGroveMenuPickerTableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
+//            ElkGroveMenuPickerTableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
         }
         
         
@@ -65,7 +65,7 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         
         func segmentView(segmentView: SMBasicSegmentView, didSelectSegmentAtIndex index: Int) {
             currentIndex = index
-            ElkGroveMenuPickerTableView.reloadData()
+            WheelingMenuPickerTableView.reloadData()
         }
         
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -94,7 +94,7 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         /************************************/
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-            let currentEGMenuCell = tableView.dequeueReusableCellWithIdentifier("myEGMenuCell", forIndexPath: indexPath)
+            let currentEGMenuCell = tableView.dequeueReusableCellWithIdentifier("myWMenuCell", forIndexPath: indexPath)
             
             if currentIndex == 0 {//currentIndex == 0{
                 let currentWheelingMenuItem = WheelingSubsMenuArray[indexPath.row]
@@ -121,23 +121,6 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
             }
             selectedMenuItem = indexPath.row
             
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
-            var destViewController : UIViewController
-            switch (indexPath.row) {
-            case 0:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            case 1:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            case 2:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            default:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            }
-            sideMenuController()?.setContentViewController(destViewController)
         }
         
         
@@ -185,7 +168,8 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         @IBAction func Drinks(sender: UIButton) {
         }
         
-        @IBAction func toggleElkGroveMenuSideMenu(sender: AnyObject) {
-            toggleSideMenuView()
-        }
+    @IBAction func toggleWheelingSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
+
+    }
     }

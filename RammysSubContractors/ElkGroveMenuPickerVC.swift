@@ -115,25 +115,7 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             if (indexPath.row == selectedMenuItem) {
                 return
             }
-            selectedMenuItem = indexPath.row
-            
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
-            var destViewController : UIViewController
-            switch (indexPath.row) {
-            case 0:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            case 1:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            case 2:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            default:
-                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ElkGroveSubsVC")
-                break
-            }
-            sideMenuController()?.setContentViewController(destViewController)
+        
         }
         
         
