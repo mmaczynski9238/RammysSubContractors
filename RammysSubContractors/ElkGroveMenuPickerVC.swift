@@ -21,7 +21,7 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         var selectedMenuItem : Int = 0
         var currentIndex = 0
         
-        
+        var isOpen = false
         
         
         override func viewDidLoad() {
@@ -33,6 +33,10 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             initSides()
             createSegmentView()
             
+            let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+            self.view.addGestureRecognizer(swipeLeft)
+            initializeGestureRecognizer()
             
             ElkGroveMenuPickerTableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
         }
@@ -166,5 +170,39 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         @IBAction func toggleElkGroveMenuSideMenu(sender: AnyObject) {
             toggleSideMenuView()
         }
-       
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Left:
+                if isOpen == true
+                {
+                    toggleSideMenuView()
+                }
+            default:
+                break
+            }
+        }
+    }
+    
+    func initializeGestureRecognizer()
+    {
+        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
+        view.addGestureRecognizer(tapGesture)
+    }
+    func recognizeTapGesture(sender: UIGestureRecognizer) {
+        if isOpen == true {
+            toggleSideMenuView()
+        }
+    }
+    
+    
+    func sideMenuDidClose() {
+        isOpen = false
+    }
+    func sideMenuDidOpen() {
+        isOpen = true
+    }
+    
+
 }
