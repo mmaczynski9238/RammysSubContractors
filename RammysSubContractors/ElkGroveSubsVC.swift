@@ -40,10 +40,7 @@ class ElkGroveSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate,
         let currentEGCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
         currentEGCell.textLabel!.text = currentEGMenuItem.name
         currentEGCell.detailTextLabel?.text = currentEGMenuItem.description
-        currentEGCell.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
-        currentEGCell.textLabel!.textColor = UIColor.whiteColor()
-        currentEGCell.detailTextLabel!.textColor = UIColor.whiteColor()
-        
+                
 
         
         //var image:UIImage = UIImage(named: "sub")!

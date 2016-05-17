@@ -23,7 +23,7 @@ class CustomTableViewController: UITableViewController {
         // Preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         
-        tableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
+        //tableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
     }
     
     // MARK: - Table view data source
@@ -83,7 +83,7 @@ class CustomTableViewController: UITableViewController {
             
         }
         
-        cell?.textLabel?.textColor = UIColor.whiteColor()
+        cell?.textLabel?.textColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
         
         //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         

@@ -62,9 +62,7 @@ class WheelingSubsVC: UIViewController, ENSideMenuDelegate, UITableViewDelegate,
         let currentCell = tableView.dequeueReusableCellWithIdentifier("myWCell")!
         currentCell.textLabel!.text = currentMenuItem.name
         currentCell.detailTextLabel?.text = currentMenuItem.description
-        currentCell.backgroundColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
-        currentCell.textLabel!.textColor = UIColor.whiteColor()
-        currentCell.detailTextLabel!.textColor = UIColor.whiteColor()
+       
         
         //it is 2:49
         

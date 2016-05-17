@@ -34,8 +34,8 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             createSegmentView()
             
             
-            ElkGroveMenuPickerTableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
-        }
+           
+    }
         
         
         
@@ -107,6 +107,10 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
                 currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
                 currentEGMenuCell.detailTextLabel?.text = currentEGMenuItem.description
             }
+            currentEGMenuCell.backgroundColor = UIColor(red: 0.0, green: 91/255, blue: 191/255, alpha: 1.0)
+            currentEGMenuCell.textLabel?.textColor = UIColor.whiteColor()
+            currentEGMenuCell.detailTextLabel?.textColor = UIColor.whiteColor()
+
             return currentEGMenuCell
         }
         
