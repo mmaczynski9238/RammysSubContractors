@@ -26,7 +26,7 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         var currentIndex = 0
         
         
-        
+        var isOpen = false
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -37,6 +37,11 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
             initSides()
             createSegmentView()
             
+            let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+            self.view.addGestureRecognizer(swipeLeft)
+            initializeGestureRecognizer()
+
             
 //            ElkGroveMenuPickerTableView.selectRowAtIndexPath(NSIndexPath(forRow: selectedMenuItem, inSection: 0), animated: false, scrollPosition: .Middle)
         }
@@ -172,4 +177,39 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
         toggleSideMenuView()
 
     }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Left:
+                if isOpen == true
+                {
+                    toggleSideMenuView()
+                }
+            default:
+                break
+            }
+        }
     }
+    
+    func initializeGestureRecognizer()
+    {
+        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
+        view.addGestureRecognizer(tapGesture)
+    }
+    func recognizeTapGesture(sender: UIGestureRecognizer) {
+        if isOpen == true {
+            toggleSideMenuView()
+        }
+    }
+    
+    
+    func sideMenuDidClose() {
+        isOpen = false
+    }
+    func sideMenuDidOpen() {
+        isOpen = true
+    }
+    
+
+}
