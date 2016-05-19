@@ -18,6 +18,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     let geocoder = CLGeocoder()
     var currentLocationPlacemark: CLPlacemark?
     
+    var isOpen = false
+    
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
