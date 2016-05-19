@@ -19,5 +19,10 @@ class Menu {
         description = d
         
         
-    }    
+    }
+    init()
+    {
+        name = ""
+        description = ""
+    }
 }

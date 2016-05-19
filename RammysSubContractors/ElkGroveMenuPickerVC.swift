@@ -95,23 +95,23 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             let currentEGMenuCell = tableView.dequeueReusableCellWithIdentifier("myEGMenuCell", forIndexPath: indexPath)
-            
+            var currentEGMenuItem = Menu()
             if currentIndex == 0 {//currentIndex == 0{
-                let currentEGMenuItem = ElkGroveSubsMenuArray[indexPath.row]
-                currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
-                currentEGMenuCell.detailTextLabel?.text = currentEGMenuItem.description
+                currentEGMenuItem = ElkGroveSubsMenuArray[indexPath.row]
+                
+                
             }
             if currentIndex == 1{
-                let currentEGMenuItem = ElkGroveSidesMenuArray[indexPath.row]
-                currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
-                currentEGMenuCell.detailTextLabel?.text = currentEGMenuItem.description
+                currentEGMenuItem = ElkGroveSidesMenuArray[indexPath.row]
+                
             }
             if currentIndex == 2{
-                let currentEGMenuItem = ElkGroveDrinksMenuArray[indexPath.row]
-                currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
-                currentEGMenuCell.detailTextLabel?.text = currentEGMenuItem.description
+                currentEGMenuItem = ElkGroveDrinksMenuArray[indexPath.row]
+               
             }
-            currentEGMenuCell.backgroundColor = UIColor(red: 0.0, green: 91/255, blue: 191/255, alpha: 1.0)
+            currentEGMenuCell.textLabel!.text = currentEGMenuItem.name
+            currentEGMenuCell.detailTextLabel?.text = currentEGMenuItem.description
+            currentEGMenuCell.backgroundColor = UIColor(red: 41/255, green: 57/255, blue: 64/255, alpha: 1.0)
             currentEGMenuCell.textLabel?.textColor = UIColor.whiteColor()
             currentEGMenuCell.detailTextLabel?.textColor = UIColor.whiteColor()
 
@@ -191,14 +191,14 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
     
     func initializeGestureRecognizer()
     {
-        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
-        view.addGestureRecognizer(tapGesture)
+//        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
+//        view.addGestureRecognizer(tapGesture)
     }
-    func recognizeTapGesture(sender: UIGestureRecognizer) {
-        if isOpen == true {
-            toggleSideMenuView()
-        }
-    }
+//    func recognizeTapGesture(sender: UIGestureRecognizer) {
+//        if isOpen == true {
+//            toggleSideMenuView()
+//        }
+//    }
     
     
     func sideMenuDidClose() {

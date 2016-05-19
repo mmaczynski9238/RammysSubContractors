@@ -84,6 +84,7 @@ class CustomTableViewController: UITableViewController {
         }
         
         cell?.textLabel?.textColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+        cell?.textLabel?.font = UIFont(name: "Arial Hebrew", size: 17)
         
         //cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
         
