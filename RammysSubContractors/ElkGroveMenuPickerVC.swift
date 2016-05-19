@@ -160,7 +160,6 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         
         
         @IBAction func Subs(sender: UIButton) {
-            
         }
         @IBAction func Sides(sender: UIButton) {
         }
@@ -187,14 +186,14 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
     
     func initializeGestureRecognizer()
     {
-        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
-        view.addGestureRecognizer(tapGesture)
+//        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
+//        view.addGestureRecognizer(tapGesture)
     }
-    func recognizeTapGesture(sender: UIGestureRecognizer) {
-        if isOpen == true {
-            toggleSideMenuView()
-        }
-    }
+//    func recognizeTapGesture(sender: UIGestureRecognizer) {
+//        if isOpen == true {
+//            toggleSideMenuView()
+//        }
+//    }
     
     
     func sideMenuDidClose() {

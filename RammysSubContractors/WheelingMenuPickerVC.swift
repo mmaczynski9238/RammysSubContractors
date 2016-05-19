@@ -194,13 +194,13 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
     
     func initializeGestureRecognizer()
     {
-        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
-        view.addGestureRecognizer(tapGesture)
-    }
-    func recognizeTapGesture(sender: UIGestureRecognizer) {
-        if isOpen == true {
-            toggleSideMenuView()
-        }
+//        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
+//        view.addGestureRecognizer(tapGesture)
+//    }
+//    func recognizeTapGesture(sender: UIGestureRecognizer) {
+//        if isOpen == true {
+//            toggleSideMenuView()
+//        }
     }
     
     
