@@ -14,19 +14,14 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
-    
-    var isOpen = false
+    var wheelingPlacemark: CLPlacemark!
+    let geocoder = CLGeocoder()
+    var currentLocationPlacemark: CLPlacemark?
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        self.view.addGestureRecognizer(swipeLeft)
-        initializeGestureRecognizer()
-
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -38,16 +33,27 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         findLocation(wheelingLocation)
         
         self.sideMenuController()?.sideMenu?.delegate = self
-
+        
     }
     @IBAction func toggleAboutSideMenu(sender: AnyObject) {
         toggleSideMenuView()}
     /*********************/
     @IBAction func getLocation(sender: UIButton) {
-    self.locationManager.startUpdatingLocation()
+        self.locationManager.startUpdatingLocation()
     }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let location = locations.last
+        
+        CLGeocoder().reverseGeocodeLocation(location!) { (placemarks, error) in
+            if error != nil {
+                print(error)
+            }
+            else {
+                for placemark in placemarks! {
+                    self.currentLocationPlacemark = placemark
+                }
+            }
+        }
         
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
@@ -57,11 +63,10 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
         print("Error: " + error.localizedDescription)
     }
-
+    
     /*********************/
     func findLocation(location: String)
     {
-        let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(location) { (placemarks, error) -> Void in
             if error != nil {
                 print(error)
@@ -69,9 +74,29 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             else {
                 for placemark in placemarks! {
                     self.displayMap(placemark)
+                    self.wheelingPlacemark = placemark
+                    
                 }
+                
+                
             }
         }
+    }
+    
+    @IBAction func getDirectionsBtn(sender: UIButton) {
+        getDirections()
+    }
+    func getDirections(){
+        let directionsRequest = MKDirectionsRequest()
+        directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
+        
+        directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
+        let directions = MKDirections(request: directionsRequest)
+        directions.calculateDirectionsWithCompletionHandler { (response, error) in
+            let directions = response!.routes
+            print(directions.first?.steps.first?.instructions)
+        }
+        
     }
     /****************************************/
     
@@ -124,13 +149,5 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     }
     
     
-    func sideMenuDidClose() {
-        isOpen = false
-    }
-    func sideMenuDidOpen() {
-        isOpen = true
-    }
-    
-
     
 }
