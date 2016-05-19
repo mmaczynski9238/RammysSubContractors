@@ -164,7 +164,6 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         
         
         @IBAction func Subs(sender: UIButton) {
-            
         }
         @IBAction func Sides(sender: UIButton) {
         }
