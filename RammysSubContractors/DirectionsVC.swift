@@ -12,16 +12,22 @@ import CoreLocation
 
 class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate {
     
+    
+    
+    @IBOutlet weak var DirectionsTableView: UITableView!
+    
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
     var wheelingPlacemark: CLPlacemark!
     let geocoder = CLGeocoder()
     var currentLocationPlacemark: CLPlacemark?
+    var directions = [MKRoute]()
     
     var isOpen = false
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var distance: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +44,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         
     }
     @IBAction func toggleAboutSideMenu(sender: AnyObject) {
-        toggleSideMenuView()}
+        toggleSideMenuView()
+    }
     /*********************/
     @IBAction func getLocation(sender: UIButton) {
         self.locationManager.startUpdatingLocation()
@@ -93,10 +100,12 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
         
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
-        let directions = MKDirections(request: directionsRequest)
-        directions.calculateDirectionsWithCompletionHandler { (response, error) in
-            let directions = response!.routes
-            print(directions.first?.steps.first?.instructions)
+        var directions1 = MKDirections(request: directionsRequest)
+        directions1.calculateDirectionsWithCompletionHandler { (response, error) in
+            self.directions = response!.routes
+            print(self.directions.first?.steps.first?.instructions)
+            self.distance.text = String(self.directions.first?.distance)
+            
         }
         
     }
