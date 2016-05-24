@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate {
+class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     
     
     
@@ -22,18 +22,21 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     let geocoder = CLGeocoder()
     var currentLocationPlacemark: CLPlacemark?
     var directions = [MKRoute]()
+    var instructions = [String]()
+    
     
     var isOpen = false
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var tableView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.locationManager.delegate = self
+
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
         self.mapView.showsUserLocation = true
@@ -64,10 +67,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             }
         }
         
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        self.mapView.setRegion(region, animated: true)
-        self.locationManager.stopUpdatingLocation()
+
     }
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
         print("Error: " + error.localizedDescription)
@@ -91,19 +91,29 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             }
         }
     }
+    func insturctionFunction(){
+        instructions.append(self.directions.first!.steps[0].instructions)
+
+    }
     
     @IBAction func getDirectionsBtn(sender: UIButton) {
         getDirections()
     }
     func getDirections(){
+        
         let directionsRequest = MKDirectionsRequest()
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
-        
+        //print(currentLocationPlacemark)
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
-        var directions1 = MKDirections(request: directionsRequest)
+        let directions1 = MKDirections(request: directionsRequest)
         directions1.calculateDirectionsWithCompletionHandler { (response, error) in
             self.directions = response!.routes
-            print(self.directions.first?.steps.first?.instructions)
+            for step in (self.directions.first?.steps)!
+            {
+                print(step.instructions)
+            }
+            //print(self.directions.first!.steps[0].instructions)
+
             self.distance.text = String(self.directions.first?.distance)
             
         }
@@ -147,7 +157,20 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             }
         }
     }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return instructions.count
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let currentDMenuCell = tableView.dequeueReusableCellWithIdentifier("DCell", forIndexPath: indexPath)
+        
+        
+        let currentDMenuItem = instructions[indexPath.row]
+                    currentDMenuCell.textLabel?.text = instructions[indexPath.row]
+        tableView.reloadData()
+        print(instructions)
+        return currentDMenuCell
+    }
     func initializeGestureRecognizer()
     {
 //        var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
