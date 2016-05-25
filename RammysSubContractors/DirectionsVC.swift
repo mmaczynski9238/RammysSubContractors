@@ -10,11 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
+class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate,UITableViewDelegate, UITableViewDataSource,MKMapViewDelegate {
     
     
+    @IBOutlet weak var DTableView: UITableView!
     
-    @IBOutlet weak var DirectionsTableView: UITableView!
     
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
@@ -30,10 +30,11 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var distance: UILabel!
-    @IBOutlet weak var tableView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+        self.mapView.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.delegate = self
@@ -91,16 +92,18 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             }
         }
     }
-    func insturctionFunction(){
+    func instructionFunction(){
         instructions.append(self.directions.first!.steps[0].instructions)
 
     }
     
     @IBAction func getDirectionsBtn(sender: UIButton) {
         getDirections()
+        //print(instructions)
     }
     func getDirections(){
-        
+        DTableView.reloadData()
+
         let directionsRequest = MKDirectionsRequest()
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
         //print(currentLocationPlacemark)
@@ -108,16 +111,62 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         let directions1 = MKDirections(request: directionsRequest)
         directions1.calculateDirectionsWithCompletionHandler { (response, error) in
             self.directions = response!.routes
+            self.showRoute(self.directions)
             for step in (self.directions.first?.steps)!
             {
-                print(step.instructions)
+                self.instructions.append(step.instructions)
+
             }
             //print(self.directions.first!.steps[0].instructions)
 
+            //print(self.instructions)
             self.distance.text = String(self.directions.first?.distance)
             
+            
         }
+    }
+    
+    func plotPolyline(route: MKRoute) {
+        // 1
+        mapView.addOverlay(route.polyline)
+        // 2
+        if mapView.overlays.count == 1 {
+            mapView.setVisibleMapRect(route.polyline.boundingMapRect,
+                                      edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
+                                      animated: false)
+        }
+        else {
+            let polylineBoundingRect =  MKMapRectUnion(mapView.visibleMapRect,
+                                                       route.polyline.boundingMapRect)
+            mapView.setVisibleMapRect(polylineBoundingRect,
+                                      edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
+                                      animated: false)
+        }
+    }
+    
+    func mapView(mapView: MKMapView,
+                 rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        if (overlay is MKPolyline) {
+            if mapView.overlays.count == 1 {
+                polylineRenderer.strokeColor =
+                    UIColor.blueColor().colorWithAlphaComponent(0.75)
+            } else if mapView.overlays.count == 2 {
+                polylineRenderer.strokeColor =
+                    UIColor.greenColor().colorWithAlphaComponent(0.75)
+            } else if mapView.overlays.count == 3 {
+                polylineRenderer.strokeColor =
+                    UIColor.redColor().colorWithAlphaComponent(0.75)
+            }
+            polylineRenderer.lineWidth = 5
+        }
+        return polylineRenderer
+    }
+    func showRoute(routes: [MKRoute]) {
+        for i in 0..<routes.count {
+            plotPolyline(routes[i])
+        }
     }
     /****************************************/
     
@@ -161,15 +210,11 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         return instructions.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let currentDMenuCell = tableView.dequeueReusableCellWithIdentifier("DCell", forIndexPath: indexPath)
-        
-        
-        let currentDMenuItem = instructions[indexPath.row]
-                    currentDMenuCell.textLabel?.text = instructions[indexPath.row]
-        tableView.reloadData()
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("customcell", forIndexPath: indexPath) 
+        cell.textLabel?.text = instructions[indexPath.item]
         print(instructions)
-        return currentDMenuCell
+        return cell
     }
     func initializeGestureRecognizer()
     {
