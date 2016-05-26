@@ -137,7 +137,7 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
             WheelingSubsMenuArray.append(Menu(name: "The Hammer & Cheese", description: "Ham with Swiss or Cheddar"))
             WheelingSubsMenuArray.append(Menu(name: "The Tri-Level", description: "Roast Beef, Turkey, Ham and Cheese a Favorite!"))
             WheelingSubsMenuArray.append(Menu(name: "Rammy's Reuben", description: "Corned Beef, Kraut, Swiss, 1000 Island Wow!"))
-            WheelingSubsMenuArray.append(Menu(name: "This class is not key value coding compliant", description: "An error that Johnny frequently receives"))
+            WheelingSubsMenuArray.append(Menu(name: "Double Decker Reuben", description: "Corned Beef, Kraut, Swiss, 1000 Island Wow!"))
             WheelingSubsMenuArray.append(Menu(name: "Italian Beef with Provolone", description: "Ladle of au jus, Melted Cheese"))
             WheelingSubsMenuArray.append(Menu(name: "Tuna & Provolone", description: "Fresh Tuna Salad—Delicious!"))
             WheelingSubsMenuArray.append(Menu(name: "The Two by Four", description: "2 cheeses, 4 meats! Genoa Salami, Ham, Capicola, Pepperoni, Choice of Cheeses"))
@@ -154,13 +154,28 @@ class WheelingMenuPickerVC: UIViewController, ENSideMenuDelegate, UITableViewDel
             WheelingSubsMenuArray.append(Menu(name: "Classic Chicken", description: "With Provolone Cheese, Bacon & Chipotle Mayo"))
             WheelingSubsMenuArray.append(Menu(name: "BBQ Chicken", description: "With BBQ Sauce, Bacon & Provolone Cheese"))
             WheelingSubsMenuArray.append(Menu(name: "Parmesan Chicken", description: "With Marinara Sauce & Provolone Cheeseon Garlic Bread"))
+            WheelingSubsMenuArray.append(Menu(name: "The New Yorker", description: "Slow Roasdted Roast Beef, Swiss, Lettuce, Tomato, Onions, Seasonings and Rosemary Aioli on a Pretzel Roll"))
+
         }
         func initSides(){
-            WheelingSidesMenuArray.append(Menu(name: "Chocolate Brownie", description: "Delicious"))
+            WheelingSidesMenuArray.append(Menu(name: "Fantastic Brownies", description: ""))
+            WheelingSidesMenuArray.append(Menu(name: "Potato Salad", description: ""))
+            WheelingSidesMenuArray.append(Menu(name: "Cole Slaw", description: ""))
+            WheelingSidesMenuArray.append(Menu(name: "Cheddar Macaroni Salad", description: ""))
+            WheelingSidesMenuArray.append(Menu(name: "Chips", description: ""))
+            WheelingSidesMenuArray.append(Menu(name: "Delicious Cookies", description: ""))
         }
         
         func initDrinks(){
-            WheelingDrinksMenuArray.append(Menu(name: "Arizona Ice Tea", description: "Refreshing"))
+            WheelingDrinksMenuArray.append(Menu(name: "Arizona Teas", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Gatorade", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Can of Soda", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Large Founatain Drink", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Medium Fountain Drink", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Banana Shakes", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Strawberry Shakes", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Chocolate Shakes", description: ""))
+            WheelingDrinksMenuArray.append(Menu(name: "Vanilla Shakes", description: ""))
         }
         
         

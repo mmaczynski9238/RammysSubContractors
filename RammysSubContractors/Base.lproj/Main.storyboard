@@ -90,13 +90,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKC-g2-MHM">
-                                <rect key="frame" x="6" y="634" width="98" height="30"/>
-                                <state key="normal" title="Get Directions"/>
-                                <connections>
-                                    <action selector="getDirectionsBtn:" destination="fV7-UV-vny" eventType="touchUpInside" id="zRD-aD-fGp"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hiV-TE-beQ">
                                 <rect key="frame" x="0.0" y="332" width="375" height="298"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,6 +108,13 @@
                                     <outlet property="delegate" destination="fV7-UV-vny" id="ZtG-2j-0AZ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKC-g2-MHM">
+                                <rect key="frame" x="6" y="634" width="98" height="30"/>
+                                <state key="normal" title="Get Directions"/>
+                                <connections>
+                                    <action selector="getDirectionsBtn:" destination="fV7-UV-vny" eventType="touchUpInside" id="zRD-aD-fGp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -146,6 +146,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="DTableView" destination="hiV-TE-beQ" id="Wgj-yj-zl6"/>
+                        <outlet property="GDirections" destination="eKC-g2-MHM" id="yk0-o7-Jfc"/>
                         <outlet property="distance" destination="oIH-xt-TbE" id="mhR-SE-qyb"/>
                         <outlet property="mapView" destination="YFc-Dw-RJQ" id="QIa-cI-ky8"/>
                     </connections>

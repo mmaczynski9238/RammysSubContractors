@@ -135,7 +135,7 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             ElkGroveSubsMenuArray.append(Menu(name: "The Hammer & Cheese", description: "Ham with Swiss or Cheddar"))
             ElkGroveSubsMenuArray.append(Menu(name: "The Tri-Level", description: "Roast Beef, Turkey, Ham and Cheese a Favorite!"))
             ElkGroveSubsMenuArray.append(Menu(name: "Rammy's Reuben", description: "Corned Beef, Kraut, Swiss, 1000 Island Wow!"))
-            ElkGroveSubsMenuArray.append(Menu(name: "This class is not key value coding compliant", description: "An error that Johnny frequently receives"))
+            ElkGroveSubsMenuArray.append(Menu(name: "Double Decker Reuben", description: "Corned Beef, Kraut, Swiss, 1000 Island Wow!"))
             ElkGroveSubsMenuArray.append(Menu(name: "Italian Beef with Provolone", description: "Ladle of au jus, Melted Cheese"))
             ElkGroveSubsMenuArray.append(Menu(name: "Tuna & Provolone", description: "Fresh Tuna Salad—Delicious!"))
             ElkGroveSubsMenuArray.append(Menu(name: "The Two by Four", description: "2 cheeses, 4 meats! Genoa Salami, Ham, Capicola, Pepperoni, Choice of Cheeses"))
@@ -152,13 +152,27 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             ElkGroveSubsMenuArray.append(Menu(name: "Classic Chicken", description: "With Provolone Cheese, Bacon & Chipotle Mayo"))
             ElkGroveSubsMenuArray.append(Menu(name: "BBQ Chicken", description: "With BBQ Sauce, Bacon & Provolone Cheese"))
             ElkGroveSubsMenuArray.append(Menu(name: "Parmesan Chicken", description: "With Marinara Sauce & Provolone Cheeseon Garlic Bread"))
+            ElkGroveSubsMenuArray.append(Menu(name: "The New Yorker", description: "Slow Roasdted Roast Beef, Swiss, Lettuce, Tomato, Onions, Seasonings and Rosemary Aioli on a Pretzel Roll"))
         }
         func initSides(){
-            ElkGroveSidesMenuArray.append(Menu(name: "Chocolate Brownie", description: "Delicious"))
+            ElkGroveSidesMenuArray.append(Menu(name: "Fantastic Brownies", description: ""))
+            ElkGroveSidesMenuArray.append(Menu(name: "Potato Salad", description: ""))
+            ElkGroveSidesMenuArray.append(Menu(name: "Cole Slaw", description: ""))
+            ElkGroveSidesMenuArray.append(Menu(name: "Cheddar Macaroni Salad", description: ""))
+            ElkGroveSidesMenuArray.append(Menu(name: "Chips", description: ""))
+            ElkGroveSidesMenuArray.append(Menu(name: "Delicious Cookies", description: ""))
         }
         
         func initDrinks(){
-            ElkGroveDrinksMenuArray.append(Menu(name: "Arizona Ice Tea", description: "Refreshing"))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Arizona Teas", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Gatorade", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Can of Soda", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Large Founatain Drink", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Medium Fountain Drink", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Banana Shakes", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Strawberry Shakes", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Chocolate Shakes", description: ""))
+            ElkGroveDrinksMenuArray.append(Menu(name: "Vanilla Shakes", description: ""))
         }
         
         

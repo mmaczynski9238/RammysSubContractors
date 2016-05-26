@@ -14,6 +14,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     
     
     @IBOutlet weak var DTableView: UITableView!
+    @IBOutlet weak var GDirections: UIButton!
     
     
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
@@ -109,6 +110,9 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         //print(currentLocationPlacemark)
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
         let directions1 = MKDirections(request: directionsRequest)
+        if currentLocationPlacemark == nil{
+            
+        }
         directions1.calculateDirectionsWithCompletionHandler { (response, error) in
             self.directions = response!.routes
             self.showRoute(self.directions)
