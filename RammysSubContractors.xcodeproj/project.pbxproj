@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7271E4E1CF78A1B00B57561 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7271E4D1CF78A1B00B57561 /* AboutViewController.swift */; };
 		DB251D4D1CE570BF00F9E2E6 /* DirectionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */; };
 		DB7E262E1CD951900058981E /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262D1CD951900058981E /* ENSideMenu.swift */; };
 		DB7E26301CD952220058981E /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7271E4D1CF78A1B00B57561 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DB19F04A1CE7830500891029 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		DB19F04B1CE7831700891029 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../Downloads/roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		DB19F04C1CE7832500891029 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				E70C9AC01CDBD9280000F313 /* DetailsViewController.swift */,
 				F51FEEDA1CDA824A00037502 /* DirectionsVC.swift */,
 				DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */,
+				D7271E4D1CF78A1B00B57561 /* AboutViewController.swift */,
 				F59E81801CD7E36D0057A02A /* Assets.xcassets */,
 			);
 			path = RammysSubContractors;
@@ -371,6 +374,7 @@
 				DB86DA931CE16C0300227413 /* ElkGroveMenuPickerVC.swift in Sources */,
 				DB7E262E1CD951900058981E /* ENSideMenu.swift in Sources */,
 				DBB029A31CD94C6600B8DA12 /* CustomTableViewController.swift in Sources */,
+				D7271E4E1CF78A1B00B57561 /* AboutViewController.swift in Sources */,
 				F59E817C1CD7E36D0057A02A /* MainVC.swift in Sources */,
 				DB86DA951CE16C4300227413 /* WheelingMenuPickerVC.swift in Sources */,
 				E70C9AC11CDBD9280000F313 /* DetailsViewController.swift in Sources */,

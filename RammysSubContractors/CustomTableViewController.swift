@@ -121,8 +121,14 @@ class CustomTableViewController: UITableViewController {
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("WheelingMenuPickerVC")
             break
-        default:
+        case 3:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4")
+            break
+        case 4:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AboutViewController")
+            break
+        default:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainMenu")
             break
         }
         sideMenuController()?.setContentViewController(destViewController)
