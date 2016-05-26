@@ -47,6 +47,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         
         self.sideMenuController()?.sideMenu?.delegate = self
         
+       disableBtn()
+        
     }
     @IBAction func toggleAboutSideMenu(sender: AnyObject) {
         toggleSideMenuView()
@@ -65,11 +67,20 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             else {
                 for placemark in placemarks! {
                     self.currentLocationPlacemark = placemark
+                    self.disableBtn()
                 }
             }
         }
         
 
+    }
+    func disableBtn(){
+        if currentLocationPlacemark == nil{
+            GDirections.enabled = false
+        }
+        else {
+            GDirections.enabled = true
+        }
     }
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
         print("Error: " + error.localizedDescription)
@@ -108,11 +119,10 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         let directionsRequest = MKDirectionsRequest()
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
         //print(currentLocationPlacemark)
+
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
         let directions1 = MKDirections(request: directionsRequest)
-        if currentLocationPlacemark == nil{
-            
-        }
+        
         directions1.calculateDirectionsWithCompletionHandler { (response, error) in
             self.directions = response!.routes
             self.showRoute(self.directions)
@@ -149,21 +159,15 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     }
     
     func mapView(mapView: MKMapView,
-                 rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
+                 rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         
         let polylineRenderer = MKPolylineRenderer(overlay: overlay)
         if (overlay is MKPolyline) {
             if mapView.overlays.count == 1 {
                 polylineRenderer.strokeColor =
                     UIColor.blueColor().colorWithAlphaComponent(0.75)
-            } else if mapView.overlays.count == 2 {
-                polylineRenderer.strokeColor =
-                    UIColor.greenColor().colorWithAlphaComponent(0.75)
-            } else if mapView.overlays.count == 3 {
-                polylineRenderer.strokeColor =
-                    UIColor.redColor().colorWithAlphaComponent(0.75)
+                        polylineRenderer.lineWidth = 5
             }
-            polylineRenderer.lineWidth = 5
         }
         return polylineRenderer
     }

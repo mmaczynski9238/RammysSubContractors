@@ -33,7 +33,7 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             initSides()
             createSegmentView()
             
-            let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ElkGroveMenuPickerVC.respondToSwipeGesture(_:)))
             swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
             self.view.addGestureRecognizer(swipeLeft)
             initializeGestureRecognizer()

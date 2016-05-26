@@ -18,7 +18,7 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(DetailsViewController.respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
         initializeGestureRecognizer()
@@ -81,7 +81,7 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
     
 
     
-    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result:MessageComposeResult) {
+    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result:MessageComposeResult) {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
