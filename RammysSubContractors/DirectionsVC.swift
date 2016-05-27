@@ -99,7 +99,9 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
                 for placemark in placemarks! {
                     self.displayMap(placemark)
                     self.wheelingPlacemark = placemark
-                    self.EGPlacemark = placemark
+                    if self.segmentConroller.selectedSegmentIndex == 1{
+                        self.EGPlacemark = placemark
+                    }
                     
                 }
                 
@@ -144,6 +146,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
 
             //print(self.instructions)
             self.distance.text = String(self.directions.first?.distance)
+            
             
             
         }
