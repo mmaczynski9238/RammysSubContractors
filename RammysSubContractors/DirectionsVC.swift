@@ -13,6 +13,7 @@ import CoreLocation
 class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocationManagerDelegate,UITableViewDelegate, UITableViewDataSource,MKMapViewDelegate {
     
     
+    @IBOutlet weak var segmentConroller: UISegmentedControl!
     @IBOutlet weak var DTableView: UITableView!
     @IBOutlet weak var GDirections: UIButton!
     
@@ -20,6 +21,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     var elkGroveLocation = "1022 E Higgins Rd, Elk Grove Village, IL 60007"
     var wheelingLocation = "834 Wheeling Rd, Wheeling, IL 60090"
     var wheelingPlacemark: CLPlacemark!
+    var EGPlacemark: CLPlacemark!
     let geocoder = CLGeocoder()
     var currentLocationPlacemark: CLPlacemark?
     var directions = [MKRoute]()
@@ -97,6 +99,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
                 for placemark in placemarks! {
                     self.displayMap(placemark)
                     self.wheelingPlacemark = placemark
+                    self.EGPlacemark = placemark
                     
                 }
                 
@@ -117,7 +120,13 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         DTableView.reloadData()
 
         let directionsRequest = MKDirectionsRequest()
+        if segmentConroller.selectedSegmentIndex == 1{
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
+        }
+        if segmentConroller.selectedSegmentIndex == 2 {
+            directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: EGPlacemark))
+
+        }
         //print(currentLocationPlacemark)
 
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
@@ -141,9 +150,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     }
     
     func plotPolyline(route: MKRoute) {
-        // 1
         mapView.addOverlay(route.polyline)
-        // 2
         if mapView.overlays.count == 1 {
             mapView.setVisibleMapRect(route.polyline.boundingMapRect,
                                       edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
@@ -196,8 +203,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             findLocation(wheelingLocation)
         case 1:
             findLocation(elkGroveLocation)
-        default:
-            findLocation(wheelingLocation)
+        default: break
+            
         }
     }
     

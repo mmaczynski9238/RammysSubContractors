@@ -146,6 +146,7 @@
                         <outlet property="GDirections" destination="eKC-g2-MHM" id="yk0-o7-Jfc"/>
                         <outlet property="distance" destination="oIH-xt-TbE" id="mhR-SE-qyb"/>
                         <outlet property="mapView" destination="YFc-Dw-RJQ" id="QIa-cI-ky8"/>
+                        <outlet property="segmentConroller" destination="sKd-eL-Tpv" id="cOk-54-LFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPC-Ah-yNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
