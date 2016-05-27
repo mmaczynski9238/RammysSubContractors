@@ -16,7 +16,7 @@
         <!--ViewController3-->
         <scene sceneID="dYi-xa-HDg">
             <objects>
-                <viewController storyboardIdentifier="ViewController3" title="ViewController3" id="Jwr-Vo-MXr" customClass="AboutViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" title="ViewController3" id="Jwr-Vo-MXr" customClass="AboutViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sab-He-aWu"/>
                         <viewControllerLayoutGuide type="bottom" id="PkI-YO-mSg"/>
@@ -51,9 +51,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="aboutButtonMainVC" destination="DZZ-8o-eEZ" id="nme-vf-8ha"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8m-CM-n8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
