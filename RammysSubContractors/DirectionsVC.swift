@@ -122,12 +122,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
         DTableView.reloadData()
 
         let directionsRequest = MKDirectionsRequest()
-        if segmentConroller.selectedSegmentIndex == 0{
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: wheelingPlacemark))
-        }
-        if segmentConroller.selectedSegmentIndex == 1 {
-
-        }
+       
         //print(currentLocationPlacemark)
 
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(placemark: currentLocationPlacemark!))
