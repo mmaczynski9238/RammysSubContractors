@@ -4,14 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Roboto-Light.ttf">
-            <string>Roboto-Light</string>
-            <string>Roboto-Light</string>
-            <string>Roboto-Light</string>
-            <string>Roboto-Light</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--ViewController3-->
         <scene sceneID="dYi-xa-HDg">
@@ -46,13 +38,13 @@
                                     </navigationBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF0-Y1-OuK">
                                         <rect key="frame" x="14" y="0.0" width="353" height="686"/>
-                                        <mutableString key="text">The History of Rammy’s Sub Contractors
+                                        <string key="text">The History of Rammy’s Sub Contractors
 
 Mike Hrametz, or Rammy as he’s been known since his school days, dreamed for years of opening his own sandwich shop. He knew all along that his would be no ordinary shop — and he would definitely not serve ordinary sandwiches. With his background in construction and studies in food service, Mike daydreamed and schemed, and came up with a concept that was like no other. The Rammy’s Sub Contractors brainchild was to be a unique, construction-themed shop that served mouthwatering and unbelievably great food.
 
 Mike opened the first store in 1998 and Rammy’s Sub Contractors customers lined up out the door, snaked across the parking lot, and waited on the curbs just to try our delicious, oven-baked sub sandwiches. Since then, loyal Sub Contractors fans have continued to come in droves.
 
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -63,11 +55,12 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="l6j-Kt-kxF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8m-CM-n8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749.5" y="1611.5"/>
+            <point key="canvasLocation" x="2100.5" y="1444.5"/>
         </scene>
         <!--Directions View Controller-->
         <scene sceneID="jQf-Et-wYw">
@@ -108,7 +101,7 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hxc-Qe-a67" id="TwA-xW-HlJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -164,7 +157,7 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPC-Ah-yNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81.5" y="1447.5"/>
+            <point key="canvasLocation" x="2100.5" y="676.5"/>
         </scene>
         <!--ElkGroveMenuPickerVC-->
         <scene sceneID="xpX-bO-0Ts">
@@ -179,25 +172,25 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RZH-fO-g28">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEGMenuCell" textLabel="cBa-Ke-2Ml" detailTextLabel="hpj-gy-5bc" style="IBUITableViewCellStyleSubtitle" id="1bR-Zj-Eeb">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1bR-Zj-Eeb" id="ZgJ-vX-k8S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cBa-Ke-2Ml">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hpj-gy-5bc">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,76 +227,7 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQB-CW-Deu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684.5" y="-99.5"/>
-        </scene>
-        <!--ElkGroveSubsVC-->
-        <scene sceneID="N6v-dP-LmT">
-            <objects>
-                <viewController storyboardIdentifier="ElkGroveSubsVC" title="ElkGroveSubsVC" id="pM8-Wb-m6e" customClass="ElkGroveSubsVC" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="46s-fr-EhC"/>
-                        <viewControllerLayoutGuide type="bottom" id="gdB-dZ-am4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Kc-Pu-Q1F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24x-rb-o2b">
-                                <rect key="frame" x="14" y="63" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="MbJ-fd-b3Y" kind="show" id="7L4-HT-zsy"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TR2-od-rFg">
-                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" textLabel="30T-h1-ERf" detailTextLabel="MTZ-Ic-JmK" rowHeight="73" style="IBUITableViewCellStyleSubtitle" id="raq-8c-m1A">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="raq-8c-m1A" id="xDL-MI-YeC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30T-h1-ERf">
-                                                    <rect key="frame" x="15" y="19" width="32" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MTZ-Ic-JmK">
-                                                    <rect key="frame" x="15" y="39" width="31" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ECH-CW-jEO" kind="presentation" id="wng-FV-T4S"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="pM8-Wb-m6e" id="ymx-X7-DOe"/>
-                                    <outlet property="delegate" destination="pM8-Wb-m6e" id="RII-j8-My2"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="ElkGroveMenuTableView" destination="TR2-od-rFg" id="ju2-AV-zVo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DBs-qY-bEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3134.5" y="-105.5"/>
+            <point key="canvasLocation" x="2100.5" y="-875.5"/>
         </scene>
         <!--WheelingMenuPickerVC-->
         <scene sceneID="6oz-TU-6Or">
@@ -318,25 +242,25 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="57N-fk-zZk">
-                                <rect key="frame" x="0.0" y="61" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myWMenuCell" textLabel="GmC-wO-egE" detailTextLabel="Iqx-c9-YGb" style="IBUITableViewCellStyleSubtitle" id="tVI-If-PR0">
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tVI-If-PR0" id="L60-WA-6kN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GmC-wO-egE">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iqx-c9-YGb">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -372,110 +296,7 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0O-MT-UzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684.5" y="684.5"/>
-        </scene>
-        <!--WheelingSubsVC-->
-        <scene sceneID="but-hl-TtZ">
-            <objects>
-                <viewController storyboardIdentifier="WheelingSubsVC" title="WheelingSubsVC" id="rvB-An-EO9" customClass="WheelingSubsVC" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K8g-pS-E78"/>
-                        <viewControllerLayoutGuide type="bottom" id="IYj-JR-EaI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MIu-Mx-rdx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08R-1m-V9R">
-                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myWCell" textLabel="Xbv-yK-qyI" detailTextLabel="y6i-57-NeG" rowHeight="76" style="IBUITableViewCellStyleSubtitle" id="Lht-GO-IZ3">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lht-GO-IZ3" id="OwE-oH-ttN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xbv-yK-qyI">
-                                                    <rect key="frame" x="15" y="21" width="32" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y6i-57-NeG">
-                                                    <rect key="frame" x="15" y="41" width="41" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="rvB-An-EO9" id="htT-Nd-aAg"/>
-                                    <outlet property="delegate" destination="rvB-An-EO9" id="wfW-1H-POU"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNE-9l-Cuu">
-                                <rect key="frame" x="21" y="58" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="0AB-Ks-4nK" kind="show" id="aUN-62-gx2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="WheelingMenuTableView" destination="08R-1m-V9R" id="lgY-UT-64h"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D4l-o4-2cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2235.5" y="684.5"/>
-        </scene>
-        <!--Details View Controller-->
-        <scene sceneID="Idy-xc-VVK">
-            <objects>
-                <viewController storyboardIdentifier="Details View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ECH-CW-jEO" customClass="DetailsViewController" customModule="RammysSubContractors" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t0p-FZ-qc3"/>
-                        <viewControllerLayoutGuide type="bottom" id="VQZ-zF-sMp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lGG-dh-nmL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-l4-BgP">
-                                <rect key="frame" x="105" y="282" width="30" height="30"/>
-                                <state key="normal" title="Text"/>
-                                <connections>
-                                    <action selector="sendText:" destination="ECH-CW-jEO" eventType="touchUpInside" id="tg5-fG-Ha5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOv-Wb-puf">
-                                <rect key="frame" x="240" y="282" width="30" height="30"/>
-                                <state key="normal" title="Call"/>
-                                <connections>
-                                    <action selector="phoneCall:" destination="ECH-CW-jEO" eventType="touchUpInside" id="bdQ-Hu-knH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="callBtn" destination="kOv-Wb-puf" id="KfD-Bx-TGw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gml-dg-DXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2107.5" y="-105.5"/>
+            <point key="canvasLocation" x="2100.5" y="-91.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecj-cS-SAt">
@@ -506,50 +327,43 @@ Mike opened the first store in 1998 and Rammy’s Sub Contractors customers line
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-58-mtN">
-                                <rect key="frame" x="3" y="506" width="184" height="127"/>
-                                <string key="text">Elk Grove
-1022 E. Higgins Rd.
-Elk Grove, IL 60007
-Phone: 847-981-7524
-</string>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45O-xO-bhm">
-                                <rect key="frame" x="189" y="511" width="166" height="136"/>
-                                <string key="text">Wheeling
-834 S. Wheeling Rd.
-Wheeling, IL 60090
-Phone: 847-215-7330
-
-</string>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of1-D4-yJI">
-                                <rect key="frame" x="3" y="72" width="372" height="89"/>
-                                <string key="text">Welcome to Rammy’s Sub Contractors
-</string>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58m-Ud-bm0">
-                                <rect key="frame" x="-1" y="293" width="376" height="200"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQF-bM-Wgt">
+                                <rect key="frame" x="20" y="255" width="160" height="160"/>
+                                <state key="normal" image="EGMenuIcon"/>
+                                <connections>
+                                    <segue destination="MbJ-fd-b3Y" kind="show" id="Vgf-TH-fwm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-cM-DTg">
+                                <rect key="frame" x="20" y="423" width="160" height="160"/>
+                                <state key="normal" image="DirectionsIcon"/>
+                                <connections>
+                                    <segue destination="fV7-UV-vny" kind="show" id="z0o-O0-qh1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG8-73-e6B">
+                                <rect key="frame" x="195" y="423" width="160" height="160"/>
+                                <state key="normal" image="AboutIcon"/>
+                                <connections>
+                                    <segue destination="Jwr-Vo-MXr" kind="show" id="ctK-1g-8Mp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-dT-tn9">
+                                <rect key="frame" x="195" y="255" width="160" height="160"/>
+                                <state key="normal" image="WMenuIcon"/>
+                                <connections>
+                                    <segue destination="0AB-Ks-4nK" kind="show" id="Eu5-WA-9gf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6G-mo-hou">
+                                <rect key="frame" x="20" y="597" width="335" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hours and Directions"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RammysPicInside" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-Vm-sxA">
+                                <rect key="frame" x="-28" y="-32" width="430" height="691"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-pT-gRW">
-                                <rect key="frame" x="5" y="156" width="365" height="150"/>
-                                <string key="text">Rammy’s specializes in Homeade Subs.
-Our famous subs is now available for catering.</string>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.37864408557046991" blue="0.75059876299513095" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ifE-wO-QiN">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="c9T-wU-zsW">
@@ -564,8 +378,6 @@ Our famous subs is now available for catering.</string>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="imageView" destination="58m-Ud-bm0" id="Dkf-o5-Q2V"/>
-                        <outlet property="labelHP" destination="aYf-pT-gRW" id="D4H-1Q-5JH"/>
                         <outlet property="menuButtonMainVC" destination="c9T-wU-zsW" id="ti6-Q5-E3D"/>
                     </connections>
                 </viewController>
@@ -590,7 +402,7 @@ Our famous subs is now available for catering.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjl-sc-gYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227.5" y="-99.5"/>
+            <point key="canvasLocation" x="1643.5" y="-875.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yAt-Bi-lQz">
@@ -609,7 +421,7 @@ Our famous subs is now available for catering.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6S-Nz-SdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227.5" y="684.5"/>
+            <point key="canvasLocation" x="1643.5" y="-91.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVu-u4-ixh">
@@ -628,11 +440,39 @@ Our famous subs is now available for catering.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWW-5t-XpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407.5" y="1454.5"/>
+            <point key="canvasLocation" x="1643.5" y="676.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Ua-vB-EK2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TOd-Us-Mhi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9eD-Hc-NKB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jwr-Vo-MXr" kind="relationship" relationship="rootViewController" id="UUZ-w3-jxg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrW-Mm-g8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643.5" y="1444.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AboutIcon" width="2092" height="2092"/>
+        <image name="DirectionsIcon" width="2092" height="2092"/>
+        <image name="EGMenuIcon" width="2092" height="2092"/>
+        <image name="RammysPicInside" width="2448" height="3264"/>
+        <image name="WMenuIcon" width="2092" height="2092"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7L4-HT-zsy"/>
-        <segue reference="CLR-RU-sQd"/>
+        <segue reference="z0o-O0-qh1"/>
+        <segue reference="ctK-1g-8Mp"/>
+        <segue reference="Vgf-TH-fwm"/>
+        <segue reference="Eu5-WA-9gf"/>
     </inferredMetricsTieBreakers>
 </document>

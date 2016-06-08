@@ -46,7 +46,7 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
         
         func createSegmentView()
         {
-            let segmentFrame = CGRect(x: 20.0, y: 70.0, width: 335, height: 50.0)
+            let segmentFrame = CGRect(x: 10.0, y: 613/*70.0*/, width: 355, height: 50.0)
             self.segmentView = SMSegmentView(frame: segmentFrame, separatorColour: UIColor(white: 0.95, alpha: 0.3), separatorWidth: 0.5, segmentProperties: [keySegmentTitleFont: UIFont.systemFontOfSize(12.0), keySegmentOnSelectionColour: UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0/*red: 0, green: 97.0/255.0, blue: 191.0/255.0*/, alpha: 1.0), keySegmentOffSelectionColour: UIColor.whiteColor(), keyContentVerticalMargin: Float(10.0)])
             segmentView.segmentOnSelectionTextColour = UIColor.darkGrayColor()
             self.segmentView.delegate = self
@@ -56,8 +56,8 @@ class ElkGroveMenuPickerVC: UIViewController, SMSegmentViewDelegate, ENSideMenuD
             self.segmentView.layer.borderWidth = 1.0
             let view = self.segmentView
             view.addSegmentWithTitle("Subs", onSelectionImage: UIImage(named: "clip_light"), offSelectionImage: UIImage(named: "clip"))
-            view.addSegmentWithTitle("Drinks", onSelectionImage: UIImage(named: "bulb_light"), offSelectionImage: UIImage(named: "bulb"))
-            view.addSegmentWithTitle("Sides", onSelectionImage: UIImage(named: "cloud_light"), offSelectionImage: UIImage(named: "cloud"))
+            view.addSegmentWithTitle("Sides", onSelectionImage: UIImage(named: "bulb_light"), offSelectionImage: UIImage(named: "bulb"))
+            view.addSegmentWithTitle("Drinks", onSelectionImage: UIImage(named: "cloud_light"), offSelectionImage: UIImage(named: "cloud"))
             // Set segment with index 0 as selected by default
             //segmentView.selectSegmentAtIndex(0)
             self.view.addSubview(view)

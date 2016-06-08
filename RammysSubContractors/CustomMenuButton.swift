@@ -19,7 +19,7 @@ class CustomMenuButton: UIButton {
         let lineLength:CGFloat = min(bounds.width, bounds.height) * 0.8
         
         // color of your line
-        let lineColor: UIColor = UIColor(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
+        let lineColor: UIColor = UIColor.blackColor()//(red: 0.0, green: 64/255, blue: 128/255, alpha: 1.0)
         
         // this will add small padding from button border to your first line and other lines
         let marginGap: CGFloat = 5.0

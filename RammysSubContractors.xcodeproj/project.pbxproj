@@ -64,10 +64,6 @@
 
 /* Begin PBXFileReference section */
 		D7271E4D1CF78A1B00B57561 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		DB19F04A1CE7830500891029 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		DB19F04B1CE7831700891029 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../Downloads/roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		DB19F04C1CE7832500891029 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		DB19F04D1CE7833100891029 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Downloads/roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		DB251D4C1CE570BF00F9E2E6 /* DirectionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsTableView.swift; sourceTree = "<group>"; };
 		DB7E262D1CD951900058981E /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		DB7E262F1CD952220058981E /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
@@ -126,17 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB19F04E1CE7833F00891029 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				DB19F04A1CE7830500891029 /* Roboto-Light.ttf */,
-				DB19F04C1CE7832500891029 /* Roboto-Thin.ttf */,
-				DB19F04D1CE7833100891029 /* Roboto-Regular.ttf */,
-				DB19F04B1CE7831700891029 /* Roboto-Medium.ttf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
 		DB7E26311CD9537E0058981E /* SideMenuFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				F59E817D1CD7E36D0057A02A /* Main.storyboard */,
-				DB19F04E1CE7833F00891029 /* Fonts */,
 				DBFF767A1CD989B8006ABA66 /* Other Files */,
 				DBFF76791CD9892B006ABA66 /* Custom Classes */,
 				DB7E26311CD9537E0058981E /* SideMenuFiles */,
