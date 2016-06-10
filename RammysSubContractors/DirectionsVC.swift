@@ -138,7 +138,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
 
             }
             //print(self.directions.first!.steps[0].instructions)
-
+            self.DTableView.reloadData()
             //print(self.instructions)
             self.distance.text = String(self.directions.first?.distance)
             
@@ -226,7 +226,6 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customcell", forIndexPath: indexPath) 
         cell.textLabel?.text = instructions[indexPath.item]
-        print(instructions)
         return cell
     }
     func initializeGestureRecognizer()

@@ -35,6 +35,7 @@ class DetailsViewController: UIViewController, MFMessageComposeViewControllerDel
     }
     @IBAction func phoneCall(sender: UIButton) {
         callNumber("(847)-215-7330")
+        
     }
     @IBAction func sendText(sender: UIButton) {
                 if (MFMessageComposeViewController.canSendText()) {
