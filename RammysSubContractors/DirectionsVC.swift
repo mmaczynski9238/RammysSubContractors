@@ -29,6 +29,7 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     
     
     var isOpen = false
+    var counter = 0
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
@@ -115,7 +116,11 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     }
     
     @IBAction func getDirectionsBtn(sender: UIButton) {
+        counter++
         getDirections()
+        if counter == 2{
+            GDirections.enabled = false
+        }
         //print(instructions)
     }
     func getDirections(){
@@ -141,10 +146,8 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
             self.DTableView.reloadData()
             //print(self.instructions)
             self.distance.text = String(self.directions.first?.distance)
-            
-            
-            
-        }
+        
+            }
     }
     
     func plotPolyline(route: MKRoute) {
