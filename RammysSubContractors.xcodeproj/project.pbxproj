@@ -292,7 +292,7 @@
 				TargetAttributes = {
 					F59E81751CD7E36D0057A02A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = N4B9PPLY6B;
+						DevelopmentTeam = 2FT5D2WZGS;
 					};
 					F59E81891CD7E36D0057A02A = {
 						CreatedOnToolsVersion = 7.3;
@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = RammysSubContractors/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JHHS.RammysSubContractors;
+				PRODUCT_BUNDLE_IDENTIFIER = JHHS.RammysSubContractors.619089;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -550,7 +550,7 @@
 				INFOPLIST_FILE = RammysSubContractors/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JHHS.RammysSubContractors;
+				PRODUCT_BUNDLE_IDENTIFIER = JHHS.RammysSubContractors.619089;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

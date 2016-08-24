@@ -117,9 +117,10 @@ class DirectionsViewController: UIViewController, ENSideMenuDelegate, CLLocation
     
     @IBAction func getDirectionsBtn(sender: UIButton) {
         counter++
+        if counter == 1{
         getDirections()
-        if counter == 2{
             GDirections.enabled = false
+
         }
         //print(instructions)
     }
